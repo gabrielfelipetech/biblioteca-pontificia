@@ -1,0 +1,51 @@
+:root {
+    --color-text: var(--color-blue-medium); // Cor padrão do texto no modo claro
+    --color-bg: var(--color-gold-light); // Cor de fundo no modo claro
+
+    --color-gold-light: #fffceb;
+    --color-gold-soft: #ffec7e;
+    --color-gold-medium: #ffd900;
+    --color-gold-deep: #c5a800;
+
+    --color-blue-light: #abc8ff;
+    --color-blue-soft: #77a6ff;
+    --color-blue-medium: #1c273a;
+    --color-blue-deep: #0d121b;
+
+    --color-red-light: #ffe8e8;
+    --color-red-soft: #ff8a8a;
+    --color-red-medium: #ff3737;
+    --color-red-deep: #DC2626;
+
+    /* Tamanhos de fonte */
+    --font-size-base: 16px; // Tamanho de fonte base (1rem)
+    --font-size-sm: 0.875rem; // Fonte pequena (14px)
+    --font-size-md: 1rem; // Fonte média (16px)
+    --font-size-lg: 1.125rem; // Fonte grande (18px)
+    --font-size-xl: 1.25rem; // Fonte extra grande (20px)
+    --font-size-2xl: 1.5rem; // Fonte 2x extra grande (24px)
+    --font-size-3xl: 1.875rem; // Fonte 3x extra grande (30px)
+}
+
+.dark {
+    --color-text: var(--color-gold-light); // Cor do texto no modo escuro
+    --color-bg: var(--color-blue-medium); // Cor de fundo no modo escuro
+}
+
+.bg-papyrus-classic {
+    background-color: var(--color-papyrus-classic);
+}
+
+.bg-papyrus-light {
+    background-color: var(--color-papyrus-light);
+}
+
+.bg-papyrus-medium {
+    background-color: var(--color-papyrus-medium);
+}
+
+p {
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--color-text);
+}
