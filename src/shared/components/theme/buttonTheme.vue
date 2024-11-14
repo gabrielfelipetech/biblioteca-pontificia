@@ -1,6 +1,6 @@
 <template>
   <button @click="toggleDarkMode">
-    {{ isDark }}
+    {{ isDark ? "Escuro" : "Claro" }}
   </button>
 </template>
 
