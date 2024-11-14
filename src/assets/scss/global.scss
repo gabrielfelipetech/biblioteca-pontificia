@@ -25,11 +25,14 @@
     --font-size-xl: 1.25rem; // Fonte extra grande (20px)
     --font-size-2xl: 1.5rem; // Fonte 2x extra grande (24px)
     --font-size-3xl: 1.875rem; // Fonte 3x extra grande (30px)
+    /* Font Family */
+    --font-family-3xl: Berkshire Swash, ui-serif, Georgia, Cambria, Times New Roman, Times, serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 .dark {
     --color-text: var(--color-gold-light); // Cor do texto no modo escuro
     --color-bg: var(--color-blue-medium); // Cor de fundo no modo escuro
+    --color-text-3xl: var(--color-gold-medium);
 }
 
 .bg-papyrus-classic {
@@ -48,4 +51,10 @@ p {
     font-size: var(--font-size-base);
     line-height: 1.5;
     color: var(--color-text);
+}
+h1 {
+    font-size: var(--font-size-3xl);
+    line-height: 1.5;
+    color: var(--color-text-3xl);
+    font-family: var(--font-family-3xl);
 }
