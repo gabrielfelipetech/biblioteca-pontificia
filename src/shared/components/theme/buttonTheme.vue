@@ -1,40 +1,18 @@
 <template>
-  <button @click="toggleDarkMode">
-    {{ isDark ? "Escuro" : "Claro" }}
+  <button
+    class="flex items-center gap-4 justify-center"
+    @click="toggleDarkMode"
+  >
+    <Icon v-if="!isDark" name="mdi:weather-sunny" />
+    {{ isDark ? 'Escuro' : 'Claro' }}
+    <Icon v-if="isDark" name="mdi:weather-night" />
   </button>
 </template>
 
 <script lang="ts" setup>
-import {  onBeforeMount, ref } from 'vue'
+import { useDarkMode } from '@/shared/composables/useDarkMode';
 
-const isDark = ref(false)
-
-const verifyLocalStorage = () => {
-  const isDarkLocalStorage = window.localStorage.getItem('isDark.0.0.1')
-  console.log(isDarkLocalStorage)
-  if (isDarkLocalStorage === 'yes') {
-    isDark.value = true
-    document.documentElement.classList.add('dark')
-  } else {
-    isDark.value = false
-    document.documentElement.classList.remove('dark')
-  }
-}
-onBeforeMount(() => {
-  verifyLocalStorage();
-})
-const toggleDarkMode = () => {
-  isDark.value = !isDark.value
-  window.localStorage.setItem('isDark.0.0.1', isDark.value ? 'yes' : 'no')
-  if (isDark.value) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-}
-
-
-
+const { isDark, toggleDarkMode } = useDarkMode();
 </script>
 
 <style></style>
