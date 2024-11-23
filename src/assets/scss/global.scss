@@ -1,51 +1,177 @@
 :root {
-    --color-text: var(--color-blue-medium); // Cor padrão do texto no modo claro
-    --color-bg: var(--color-gold-light); // Cor de fundo no modo claro
+  --color-text: var(
+    --color-bp-blue-900-light
+  ); // Cor padrão do texto no modo claro
+  --color-bg: var(--color-bp-yellow-50-light); // Cor de fundo no modo claro
 
-    --color-gold-light: #fffceb;
-    --color-gold-soft: #ffec7e;
-    --color-gold-medium: #ffd900;
-    --color-gold-deep: #c5a800;
+  --color-bp-blue-50-light: #eff6ff;
+  --color-bp-blue-100-light: #dbeafe;
+  --color-bp-blue-200-light: #bfdbfe;
+  --color-bp-blue-300-light: #93c5fd;
+  --color-bp-blue-400-light: #60a5fa;
+  --color-bp-blue-500-light: #3b82f6;
+  --color-bp-blue-600-light: #2563eb;
+  --color-bp-blue-700-light: #293e7a;
+  --color-bp-blue-800-light: #223058;
+  --color-bp-blue-900-light: #1c2540;
 
-    --color-blue-light: #abc8ff;
-    --color-blue-soft: #77a6ff;
-    --color-blue-medium: #1c273a;
-    --color-blue-deep: #0d121b;
+  --color-bp-red-50-light: #fef2f2;
+  --color-bp-red-100-light: #fee2e2;
+  --color-bp-red-200-light: #fecaca;
+  --color-bp-red-300-light: #fca5a5;
+  --color-bp-red-400-light: #f87171;
+  --color-bp-red-500-light: #ef4444;
+  --color-bp-red-600-light: #dc2626;
+  --color-bp-red-700-light: #b91c1c;
+  --color-bp-red-800-light: #732626;
+  --color-bp-red-900-light: #422424;
 
-    --color-red-light: #ffe8e8;
-    --color-red-soft: #ff8a8a;
-    --color-red-medium: #ff3737;
-    --color-red-deep: #DC2626;
+  --color-bp-yellow-50-light: #fffce8;
+  --color-bp-yellow-100-light: #fffbd1;
+  --color-bp-yellow-200-light: #fef2a4;
+  --color-bp-yellow-300-light: #f9e68c;
+  --color-bp-yellow-400-light: #efd36c;
+  --color-bp-yellow-500-light: #e8c751;
+  --color-bp-yellow-600-light: #f5d90a;
+  --color-bp-yellow-700-light: #f7ce00;
+  --color-bp-yellow-800-light: #946800;
+  --color-bp-yellow-900-light: #35290f;
 
-    /* Tamanhos de fonte */
-    --font-size-base: 16px; // Tamanho de fonte base (1rem)
-    --font-size-sm: 0.875rem; // Fonte pequena (14px)
-    --font-size-md: 1rem; // Fonte média (16px)
-    --font-size-lg: 1.125rem; // Fonte grande (18px)
-    --font-size-xl: 1.25rem; // Fonte extra grande (20px)
-    --font-size-2xl: 1.5rem; // Fonte 2x extra grande (24px)
-    --font-size-3xl: 1.875rem; // Fonte 3x extra grande (30px)
+  --color-bp-purple-50-light: #f7efff;
+  --color-bp-purple-100-light: #eddbfe;
+  --color-bp-purple-200-light: #dfbffe;
+  --color-bp-purple-300-light: #c893fd;
+  --color-bp-purple-400-light: #ad60fa;
+  --color-bp-purple-500-light: #993bf6;
+  --color-bp-purple-600-light: #8825eb;
+  --color-bp-purple-700-light: #52297a;
+  --color-bp-purple-800-light: #3d2258;
+  --color-bp-purple-900-light: #2e1c40;
+
+  --color-bp-green-50-light: #ecfdf5;
+  --color-bp-green-100-light: #d1fae5;
+  --color-bp-green-200-light: #a7f3d0;
+  --color-bp-green-300-light: #6ee7b7;
+  --color-bp-green-400-light: #62d78c;
+  --color-bp-green-500-light: #41b871;
+  --color-bp-green-600-light: #3aa160;
+  --color-bp-green-700-light: #367c50;
+  --color-bp-green-800-light: #084938;
+  --color-bp-green-900-light: #093429;
+
+  --color-bp-neutral-0-light: #ffffff;
+  --color-bp-neutral-50-light: #fafafa;
+  --color-bp-neutral-100-light: #f4f5f5;
+  --color-bp-neutral-200-light: #e7e8e9;
+  --color-bp-neutral-300-light: #d9dbdd;
+  --color-bp-neutral-400-light: #c4c7ca;
+  --color-bp-neutral-500-light: #a0a3a6;
+  --color-bp-neutral-600-light: #737578;
+  --color-bp-neutral-700-light: #404245;
+  --color-bp-neutral-800-light: #2c2e30;
+  --color-bp-neutral-900-light: #1d1f20;
+  --color-bp-neutral-1000-light: #131516;
+
+  --color-bp-blue-50-dark: #0d141f;
+  --color-bp-blue-100-dark: #162133;
+  --color-bp-blue-200-dark: #1f3252;
+  --color-bp-blue-300-dark: #253d66;
+  --color-bp-blue-400-dark: #2d5496;
+  --color-bp-blue-500-dark: #176dc2;
+  --color-bp-blue-600-dark: #148cf5;
+  --color-bp-blue-700-dark: #60a5fa;
+  --color-bp-blue-800-dark: #bfdbfe;
+  --color-bp-blue-900-dark: #eff6ff;
+
+  --color-bp-red-50-dark: #291415;
+  --color-bp-red-100-dark: #3c181a;
+  --color-bp-red-200-dark: #481a1d;
+  --color-bp-red-300-dark: #541b1f;
+  --color-bp-red-400-dark: #671e22;
+  --color-bp-red-500-dark: #aa2429;
+  --color-bp-red-600-dark: #dc2626;
+  --color-bp-red-700-dark: #ef4444;
+  --color-bp-red-800-dark: #fecaca;
+  --color-bp-red-900-dark: #fef2f2;
+
+  --color-bp-yellow-50-dark: #221a00;
+  --color-bp-yellow-100-dark: #2c2100;
+  --color-bp-yellow-200-dark: #352800;
+  --color-bp-yellow-300-dark: #493c00;
+  --color-bp-yellow-400-dark: #594a05;
+  --color-bp-yellow-500-dark: #c4a100;
+  --color-bp-yellow-600-dark: #f0c000;
+  --color-bp-yellow-700-dark: #f5d90a;
+  --color-bp-yellow-800-dark: #e4db8b;
+  --color-bp-yellow-900-dark: #fffad1;
+
+  --color-bp-purple-50-dark: #160d1f;
+  --color-bp-purple-100-dark: #251633;
+  --color-bp-purple-200-dark: #381f52;
+  --color-bp-purple-300-dark: #452566;
+  --color-bp-purple-400-dark: #622d96;
+  --color-bp-purple-500-dark: #6d2cad;
+  --color-bp-purple-600-dark: #8438d0;
+  --color-bp-purple-700-dark: #a868e8;
+  --color-bp-purple-800-dark: #dfbffe;
+  --color-bp-purple-900-dark: #f7efff;
+
+  --color-bp-green-50-dark: #05241b;
+  --color-bp-green-100-dark: #053629;
+  --color-bp-green-200-dark: #064937;
+  --color-bp-green-300-dark: #065c42;
+  --color-bp-green-400-dark: #157a55;
+  --color-bp-green-500-dark: #3aa160;
+  --color-bp-green-600-dark: #41b870;
+  --color-bp-green-700-dark: #6ecb90;
+  --color-bp-green-800-dark: #d1fae5;
+  --color-bp-green-900-dark: #ecfdf5;
+
+  --color-bp-neutral-0-dark: #0c0c0d;
+  --color-bp-neutral-50-dark: #101011;
+  --color-bp-neutral-100-dark: #141415;
+  --color-bp-neutral-200-dark: #171819;
+  --color-bp-neutral-300-dark: #1d1e1f;
+  --color-bp-neutral-400-dark: #2c2c2e;
+  --color-bp-neutral-500-dark: #373739;
+  --color-bp-neutral-600-dark: #505053;
+  --color-bp-neutral-700-dark: #828387;
+  --color-bp-neutral-800-dark: #c6c6c8;
+  --color-bp-neutral-900-dark: #e5e5e6;
+  --color-bp-neutral-1000-dark: #fafafa;
+
+  /* Tamanhos de fonte */
+  --font-size-sm: 0.875rem; // Fonte pequena (14px)
+  --font-size-md: 1rem; // Body
+  --font-size-xl: 1.5rem; // H3
+  --font-size-2xl: 1.75rem; // H2
+  --font-size-3xl: 2rem; // H1
+
+  /* Font Family */
+  --font-family-3xl: Berkshire Swash, ui-serif, Georgia, Cambria,
+    Times New Roman, Times, serif, ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji';
 }
 
 .dark {
-    --color-text: var(--color-gold-light); // Cor do texto no modo escuro
-    --color-bg: var(--color-blue-medium); // Cor de fundo no modo escuro
-}
-
-.bg-papyrus-classic {
-    background-color: var(--color-papyrus-classic);
-}
-
-.bg-papyrus-light {
-    background-color: var(--color-papyrus-light);
-}
-
-.bg-papyrus-medium {
-    background-color: var(--color-papyrus-medium);
+  --color-text: var(--color-bp-yellow-100-light); // Cor do texto no modo escuro
+  --color-bg: var(--color-bp-blue-900-light); // Cor de fundo no modo escuro
+  --color-text-3xl: var(--color-bp-yellow-700-light);
 }
 
 p {
-    font-size: var(--font-size-base);
-    line-height: 1.5;
-    color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+h1 {
+  font-size: var(--font-size-3xl);
+  line-height: 1.5;
+  color: var(--color-text-3xl);
+  font-family: var(--font-family-3xl);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

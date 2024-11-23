@@ -1,24 +1,18 @@
 <template>
-  <button @click="toggleDarkMode">
-    {{ isDark }}
+  <button
+    class="flex items-center gap-4 justify-center"
+    @click="toggleDarkMode"
+  >
+    <Icon v-if="!isDark" name="mdi:weather-sunny" />
+    {{ isDark ? 'Escuro' : 'Claro' }}
+    <Icon v-if="isDark" name="mdi:weather-night" />
   </button>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { useDarkMode } from '@/shared/composables/useDarkMode';
 
-const isDark = ref(false)
-
-const toggleDarkMode = () => {
-  isDark.value = !isDark.value
-  if (isDark.value) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-}
+const { isDark, toggleDarkMode } = useDarkMode();
 </script>
 
-<style>
-
-</style>
+<style></style>
