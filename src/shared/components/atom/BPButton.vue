@@ -1,107 +1,92 @@
 <template>
   <button
+    :class="[
+      'button',
+      `button--theme-${buttonTheme}`,
+      `button--icon-${iconPosition}`,
+    ]"
     v-bind="$attrs"
-    :class="[buttonColor, buttonHeightClass, buttonWidthClass]"
     @click="handleClick"
   >
-    {{ buttonText }}
+    <Icon
+      v-if="iconName && iconPosition === 'left'"
+      :name="iconName"
+      class="button__icon button__icon--left"
+    />
+    <p v-if="buttonText" class="button__text">{{ buttonText }}</p>
+    <Icon
+      v-if="iconName && iconPosition === 'right'"
+      :name="iconName"
+      class="button__icon button__icon--right"
+    />
   </button>
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits, computed } from 'vue';
+import { defineEmits } from 'vue';
 
+const emit = defineEmits(['click']);
 const props = defineProps({
   buttonText: {
     type: String,
-    required: true,
+    default: '',
   },
-  color: {
+  iconName: {
     type: String,
+    default: '',
+  },
+  buttonTheme: {
+    type: String as () => 'primary' | 'secondary' | 'tertiary',
     default: 'primary',
-    validator: (value: string) => ['primary', 'secondary'].includes(value),
   },
-  height: {
-    type: String,
-    default: 'auto',
-    validator: (value: string) =>
-      [
-        'auto',
-        'full',
-        '0',
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '16',
-        '20'
-      ].includes(value),
-  },
-  width: {
-    type: String,
-    default: 'auto',
-    validator: (value: string) =>
-      [
-        'auto',
-        'full',
-        '0',
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '14',
-        '16',
-        '20',
-        '24',
-        '32',
-        '40',
-        '48',
-        '64',
-      ].includes(value),
+  iconPosition: {
+    type: String as () => 'left' | 'right',
+    default: 'left',
   },
 });
-
-const emit = defineEmits(['click']);
-
 const handleClick = (event: Event) => {
   emit('click', event);
 };
-
-const buttonColor = computed(
-  () =>
-    (props.color === 'primary' && 'bg-green-500 text-white') ||
-    (props.color === 'secondary' && 'bg-blue-500 text-white'),
-);
-
-const buttonHeightClass = computed(
-  () =>
-    (props.height === 'auto' && 'h-auto') ||
-    (props.height === 'full' && 'h-full') ||
-    (props.height && `h-${props.height}`),
-);
-
-const buttonWidthClass = computed(
-  () =>
-    (props.width === 'auto' && 'w-auto') ||
-    (props.width === 'full' && 'w-full') ||
-    (props.width && `w-${props.width}`),
-);
 </script>
+
+<style lang="scss" scoped>
+.button {
+  @apply min-h-10;
+  &--theme-primary {
+    @apply rounded-md border-1;
+    @apply bg-bp-blue-700-light text-bp-yellow-100-light border-bp-yellow-700-light;
+    @apply dark:bg-bp-yellow-100-light dark:text-bp-blue-800-light dark:border-bp-blue-100-light;
+    &:hover {
+      @apply bg-bp-blue-800-light text-bp-yellow-50-light border-bp-yellow-50-light;
+      @apply dark:bg-bp-yellow-200-light dark:text-bp-blue-700-light dark:border-bp-blue-900-light;
+    }
+
+    &:active {
+    }
+  }
+
+  &--theme-secondary {
+    &:hover {
+    }
+
+    &:active {
+    }
+  }
+
+  &--theme-tertiary {
+    &:hover {
+    }
+
+    &:active {
+    }
+  }
+
+  &:disabled {
+  }
+}
+
+.button__text {
+  font-size: 1rem;
+  color: inherit;
+}
+</style>
