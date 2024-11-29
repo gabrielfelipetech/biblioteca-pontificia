@@ -53,14 +53,14 @@ function onInput(event: Event) {
 }
 .input-class {
   @apply h-10 border-1 rounded-lg outline-none appearance-none pr-2;
-  @apply dark:border-bp-yellow-100-light dark:bg-bp-blue-900-light;
-  @apply bg-bp-yellow-50-light border-bp-blue-700-light;
+  @apply dark:border-bp-blue-800-light dark:bg-bp-blue-900-light;
+  @apply bg-bp-yellow-50-light border-bp-yellow-700-light;
 }
 
 .input-class:hover,
 .input-class:focus {
-  @apply border-bp-blue-800-light;
-  @apply dark:border-bp-yellow-700-light;
+  @apply border-bp-yellow-800-light;
+  @apply dark:border-bp-blue-900-light;
 }
 .input-icon {
   position: absolute;
