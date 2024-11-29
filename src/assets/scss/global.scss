@@ -14,6 +14,7 @@
   --color-bp-blue-700-light: #293e7a;
   --color-bp-blue-800-light: #223058;
   --color-bp-blue-900-light: #1c2540;
+  --color-bp-blue-1000-light: #0e1320;
 
   --color-bp-red-50-light: #fef2f2;
   --color-bp-red-100-light: #fee2e2;
@@ -166,6 +167,18 @@ p {
 }
 h1 {
   font-size: var(--font-size-3xl);
+  line-height: 1.5;
+  color: var(--color-text-3xl);
+  font-family: var(--font-family-3xl);
+}
+h2 {
+  font-size: var(--font-size-2xl);
+  line-height: 1.5;
+  color: var(--color-text-3xl);
+  font-family: var(--font-family-3xl);
+}
+h3 {
+  font-size: var(--font-size-xl);
   line-height: 1.5;
   color: var(--color-text-3xl);
   font-family: var(--font-family-3xl);
