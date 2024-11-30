@@ -1,6 +1,6 @@
 <template>
   <div class="container-user-menu">
-    <div class="icon-user-menu" @click="showUserMenu = !showUserMenu">
+    <div class="icon-user-menu" @click="showUserMenu = true">
       <Icon
         name="mdi:account-circle-outline"
         size="2em"
@@ -45,10 +45,10 @@ const links = ref([
 .container-user-menu {
   .user-menu {
     @apply absolute top-14 right-1 z-10 py-3 px-3 rounded-lg flex flex-col w-72 gap-1;
-    @apply dark:bg-bp-blue-800-light dark:border-bp-yellow-50-light border-1;
-    @apply bg-bp-yellow-50-light border-bp-blue-800-light;
+    @apply dark:bg-bp-blue-800-light dark:border-bp-blue-900-light border-1;
+    @apply bg-bp-yellow-100-light border-bp-yellow-700-light;
     &__links {
-      @apply bg-bp-yellow-50-light border-bp-blue-800-light flex items-center gap-2 p-1;
+      @apply bg-bp-yellow-100-light border-bp-blue-800-light flex items-center gap-2 p-1 mb-3;
       @apply dark:bg-bp-blue-800-light dark:border-bp-yellow-50-light;
       &-link {
         @apply w-full;
