@@ -310,7 +310,7 @@ function toggleExpand(link) {
 
 <style lang="scss" scoped>
 .sidebar-container {
-  @apply fixed top-16 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 min-w-8 w-80 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto;
+  @apply fixed top-16 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 min-w-8 w-80 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto h-full;
 }
 
 .sidebar-item {
