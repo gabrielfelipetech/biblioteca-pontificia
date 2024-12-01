@@ -1,6 +1,6 @@
 <template>
   <div class="container-user-menu">
-    <div class="icon-user-menu" @click="showUserMenu = true">
+    <div class="icon-user-menu" @click="showUserMenu = !showUserMenu">
       <Icon
         name="mdi:account-circle-outline"
         size="2em"
@@ -43,6 +43,7 @@ const links = ref([
 
 <style scoped lang="scss">
 .container-user-menu {
+  @apply dark:text-bp-yellow-600-light select-none;
   .user-menu {
     @apply absolute top-14 right-1 z-10 py-3 px-3 rounded-lg flex flex-col w-72 gap-1;
     @apply dark:bg-bp-blue-800-light dark:border-bp-blue-900-light border-1;
