@@ -25,7 +25,7 @@ const searchInput = ref('');
 .input-search {
   @apply w-80;
 }
-@media (max-width: 425px) {
+@media (max-width: 470px) {
   .input-search {
     @apply hidden;
   }
