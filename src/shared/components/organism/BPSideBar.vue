@@ -1,31 +1,64 @@
 <template>
-  <nav class="sidebar-container">
-    <ul>
+  <nav :class="['sidebar-container', isSideBarOpen ? 'w-96' : 'w-16']">
+    <div class="sidebar-toggle" @click="toggleStateSideBar">
+      <Icon
+        :name="isSideBarOpen ? 'mdi:backburger' : 'mdi:menu'"
+        size="1.5rem"
+      />
+    </div>
+    <ul class="sidebar-list">
       <li v-for="link in sidebarLinks" :key="link.title">
         <div class="sidebar-item level-1" @click.stop="toggleExpand(link)">
-          <h2 class="text-lg">{{ link.title }}</h2>
-          <span v-if="link.isExpandable">
-            {{ link.isExpanded ? '-' : '+' }}
-          </span>
+          <div class="sidebar-item--icon-text">
+            <Icon
+              :name="`mdi:${link.icon}`"
+              size="1.5rem"
+              @click.stop="toggleExpand(link)"
+              @click="isSideBarOpen = true"
+            />
+            <h2 v-if="isSideBarOpen" class="text-xl font-bold">
+              {{ link.title }}
+            </h2>
+          </div>
+          <Icon
+            v-if="link.isExpandable"
+            :name="link.isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'"
+          />
         </div>
-        <ul v-if="link.isExpandable && link.isExpanded">
+        <ul v-if="isSideBarOpen && link.isExpanded" class="sidebar-list-child">
           <li v-for="child in link.children" :key="child.title">
-            <div class="sidebar-item level-2" @click.stop="toggleExpand(child)">
-              <h3 class="text-base">{{ child.title }}</h3>
-              <span v-if="child.isExpandable">
-                {{ child.isExpanded ? '-' : '+' }}
-              </span>
+            <div class="sidebar-item-child" @click.stop="toggleExpand(child)">
+              <h3
+                :class="[
+                  child.children && child.children.length > 0
+                    ? 'font-semibold text-base dark:text-bp-yellow-700-light'
+                    : 'font-black text-base dark:text-bp-yellow-200-light',
+                ]"
+              >
+                {{ child.title }}
+              </h3>
+              <Icon
+                v-if="child.isExpandable"
+                :name="
+                  child.isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'
+                "
+              />
             </div>
-            <ul v-if="child.isExpandable && child.isExpanded">
-              <li v-for="subChild in child.children" :key="subChild.title">
-                <div
-                  class="sidebar-item level-3"
-                  @click.stop="toggleExpand(child)"
-                >
-                  <h4 class="text-sm">{{ subChild.title }}</h4>
-                  <span v-if="child.isExpandable">
-                    {{ subChild.isExpanded ? '-' : '+' }}
-                  </span>
+            <ul
+              v-if="isSideBarOpen && child.isExpanded"
+              class="sidebar-list-subchild"
+            >
+              <li v-for="subchild in child.children" :key="subchild.title">
+                <div class="sidebar-item-subchild">
+                  <h4>{{ subchild.title }}</h4>
+                  <Icon
+                    v-if="subchild.isExpandable"
+                    :name="
+                      child.isExpanded
+                        ? 'mdi:chevron-down'
+                        : 'mdi:chevron-right'
+                    "
+                  />
                 </div>
               </li>
             </ul>
@@ -42,6 +75,7 @@ type BaseSidebarLink = {
   title: string;
   isRequestable?: boolean;
   isExpanded?: boolean;
+  icon?: string;
 };
 
 type SidebarLink =
@@ -53,133 +87,20 @@ type SidebarLink =
 
 const sidebarLinks = ref<SidebarLink[]>([
   {
-    title: 'Missal',
-    isExpandable: true,
-    isExpanded: false,
-    children: [
-      { title: 'Ordo', isExpandable: false, isRequestable: true },
-      {
-        title: 'Advento',
-        isExpandable: true,
-        children: [
-          { title: 'Primeiro Domingo do Advento', isRequestable: true },
-          {
-            title: 'Segunda-feira da 1ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Terça-feira da 1ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Quarta-feira da 1ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Quinta-feira da 1ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Sexta-feira da 1ª semana do Advento',
-            isRequestable: true,
-          },
-          { title: 'Sábado da 1ª semana do Advento', isRequestable: true },
-          { title: 'Segundo Domingo do Advento', isRequestable: true },
-          {
-            title: 'Segunda-feira da 2ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Terça-feira da 2ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Quarta-feira da 2ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Quinta-feira da 2ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Sexta-feira da 2ª semana do Advento',
-            isRequestable: true,
-          },
-          { title: 'Sábado da 2ª semana do Advento', isRequestable: true },
-          { title: 'Terceiro Domingo do Advento', isRequestable: true },
-          {
-            title: 'Segunda-feira da 3ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Terça-feira da 3ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Quarta-feira das Têmporas do Inverno',
-            isRequestable: true,
-          },
-          {
-            title: 'Quinta-feira da 3ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Sexta-feira das Têmporas do Inverno',
-            isRequestable: true,
-          },
-          { title: 'Sábado das Têmporas do Inverno', isRequestable: true },
-          { title: 'Quarto Domingo do Advento', isRequestable: true },
-          {
-            title: 'Segunda-feira da 4ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Terça-feira da 4ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Quarta-feira da 4ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Quinta-feira da 4ª semana do Advento',
-            isRequestable: true,
-          },
-          {
-            title: 'Sexta-feira da 4ª semana do Advento',
-            isRequestable: true,
-          },
-        ],
-      },
-      { title: 'Natal', isExpandable: false, isRequestable: true },
-      { title: 'Epifania', isExpandable: false, isRequestable: true },
-      { title: 'Pre-Quaresma', isExpandable: false, isRequestable: true },
-      { title: 'Quaresma', isExpandable: false, isRequestable: true },
-      { title: 'Páscoa', isExpandable: false, isRequestable: true },
-      { title: 'Santos', isExpandable: false, isRequestable: true },
-      { title: 'Comuns', isExpandable: false, isRequestable: true },
-      { title: 'Votivas', isExpandable: false, isRequestable: true },
-      {
-        title: 'Orações Diversas',
-        isExpandable: false,
-        isRequestable: true,
-      },
-      { title: 'Prefácios', isExpandable: false, isRequestable: true },
-      {
-        title: 'Orações Preliminares',
-        isExpandable: false,
-        isRequestable: true,
-      },
-    ],
-  },
-  {
     title: 'Devocionário',
     isExpandable: true,
+    icon: 'book-open-blank-variant-outline',
     isExpanded: false,
     children: [
+      {
+        title: 'Via Sacra',
+        isRequestable: true,
+      },
       {
         title: 'Orações Diárias',
         isExpandable: true,
+        isExpanded: false,
+
         children: [
           {
             title: 'Oração da manhã (Breve)',
@@ -246,6 +167,8 @@ const sidebarLinks = ref<SidebarLink[]>([
       {
         title: 'Santo terço',
         isExpandable: true,
+        isExpanded: false,
+
         children: [
           { title: 'Oferecimento', isExpandable: false, isRequestable: true },
           {
@@ -268,6 +191,8 @@ const sidebarLinks = ref<SidebarLink[]>([
       {
         title: 'Ladainhas',
         isExpandable: true,
+        isExpanded: false,
+
         children: [
           {
             title: 'A Nosso Senhor',
@@ -300,7 +225,73 @@ const sidebarLinks = ref<SidebarLink[]>([
       },
     ],
   },
+  {
+    title: 'Cânticos',
+    isExpandable: true,
+    icon: 'music-clef-treble',
+    isExpanded: false,
+    children: [
+      {
+        title: 'Sacros',
+        isExpandable: true,
+        isExpanded: false,
+        children: [
+          { title: 'Adóro te devóte', isRequestable: true },
+          { title: 'Ave maris stella', isRequestable: true },
+          { title: 'Ave verum', isRequestable: true },
+          { title: 'Benedícite', isRequestable: true },
+          { title: 'Benedíctus', isRequestable: true },
+          { title: 'Ecce panis angelorum', isRequestable: true },
+          { title: 'Jam lucis', isRequestable: true },
+          { title: 'Magnificat', isRequestable: true },
+          { title: 'Memento rerum conditor', isRequestable: true },
+          { title: 'Nunc Dimíttis', isRequestable: true },
+          { title: 'O gloriosa virginum', isRequestable: true },
+          { title: 'Pange, lingua, gloriósi', isRequestable: true },
+          { title: 'Parce domine', isRequestable: true },
+          { title: 'Quem terra', isRequestable: true },
+          { title: 'Salutaris', isRequestable: true },
+          { title: 'Tantum ergo', isRequestable: true },
+          { title: 'Te Deum', isRequestable: true },
+          { title: 'Te lucis', isRequestable: true },
+          { title: 'Vexílla Regis', isRequestable: true },
+        ],
+      },
+      {
+        title: 'Populares',
+        isExpandable: true,
+        isExpanded: false,
+        children: [
+          { title: 'Ó anjos cantai comigo', isRequestable: true },
+          { title: 'Bendizemos o Teu Nome', isRequestable: true },
+          { title: 'Senhor meu Bom Jesus Crucificado', isRequestable: true },
+          { title: 'Sobre os braços da azinheira', isRequestable: true },
+          { title: 'Com minha Mãe estarei', isRequestable: true },
+          {
+            title: 'Coração Santo aqui nos tens prostrados',
+            isRequestable: true,
+          },
+          { title: 'Coração Santo, Tu reinarás', isRequestable: true },
+          { title: 'Eu caminharei', isRequestable: true },
+          { title: 'Cantemos a Jesus Sacramentado', isRequestable: true },
+          { title: 'Lenta e calma sobre a terra', isRequestable: true },
+          { title: 'Queremos Deus', isRequestable: true },
+          { title: 'Que tenho eu, meu Deus', isRequestable: true },
+          { title: 'Salve, nobre Padroeira', isRequestable: true },
+          { title: 'Nossa Senhora do Carmo', isRequestable: true },
+          { title: 'Senhora, nós Vos louvamos', isRequestable: true },
+          { title: 'A treze de Maio', isRequestable: true },
+          { title: 'Senhora, um dia descestes', isRequestable: true },
+          { title: 'Virgem Pura', isRequestable: true },
+        ],
+      },
+    ],
+  },
 ]);
+const isSideBarOpen = ref(true);
+const toggleStateSideBar = () => {
+  isSideBarOpen.value = !isSideBarOpen.value;
+};
 function toggleExpand(link) {
   if (link.isExpandable) {
     link.isExpanded = !link.isExpanded;
@@ -309,31 +300,54 @@ function toggleExpand(link) {
 </script>
 
 <style lang="scss" scoped>
+.sidebar-toggle {
+  @apply rounded-lg cursor-pointer ml-2 py-0.5 pt-2 pl-2;
+}
+.sidebar-toggle:hover {
+  @apply bg-bp-yellow-200-light dark:bg-bp-blue-700-light;
+  transition-duration: 300ms;
+}
 .sidebar-container {
-  @apply fixed top-16 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 min-w-8 w-80 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto h-full;
-}
+  @apply fixed top-16 bottom-0 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 px-2 min-w-8 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto select-none;
+  @apply transition duration-500 ease-in-out;
+  transition-property: width;
+  .sidebar-list {
+    @apply flex flex-col gap-1 mt-3 ml-2;
+    .sidebar-item {
+      @apply flex justify-between items-center cursor-pointer py-1 pr-4 pl-2 rounded-lg;
+      &--icon-text {
+        @apply flex gap-2 items-center;
+      }
+    }
+    .sidebar-list-child {
+      @apply ml-5 border-l;
+      @apply flex flex-col gap-1 my-2;
 
-.sidebar-item {
-  @apply flex justify-between items-center px-4 py-2 cursor-pointer;
-  &.level-1 {
-    @apply ml-3;
+      .sidebar-item-child {
+        @apply flex items-center justify-between py-1 cursor-pointer pl-6 pr-4 rounded-e-lg;
+      }
+      .sidebar-item-child:hover {
+        @apply dark:bg-bp-blue-700-light bg-bp-yellow-200-light  border-l-1 border-black -ml-px;
+        transition-duration: 300ms;
+      }
+      .sidebar-list-subchild {
+        @apply border-l ml-6;
+        @apply flex flex-col gap-1 my-2;
+        .sidebar-item-subchild {
+          @apply flex items-center justify-between pl-3 py-1 pr-4 rounded-e-lg;
+        }
+        .sidebar-item-subchild:hover {
+          @apply border-l-1 border-black -ml-px dark:bg-bp-blue-700-light bg-bp-yellow-200-light cursor-pointer;
+          transition-duration: 300ms;
+        }
+      }
+    }
   }
-
-  &.level-2 {
-    @apply ml-6 dark:border-bp-blue-900-light border-l-2;
-  }
-
-  &.level-3 {
-    @apply ml-9 dark:border-bp-blue-900-light border-l-2;
-  }
-}
-
-.sidebar-item span {
-  @apply text-gray-500;
 }
 
 .sidebar-item:hover {
   @apply bg-bp-yellow-200-light border-bp-blue-700-light;
   @apply dark:bg-bp-blue-700-light dark:border-bp-yellow-100-light;
+  transition-duration: 300ms;
 }
 </style>
