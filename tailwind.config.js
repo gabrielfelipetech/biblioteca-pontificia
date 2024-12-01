@@ -4,6 +4,12 @@ export default {
   content: ['./src/**/*.{vue,js,ts,jsx,tsx}', './app.vue'],
   theme: {
     extend: {
+      screens: {
+        tablet: { max: '840px' }, // Para dispositivos menores que 840px
+        'mobile-b': { max: '470px' }, // Para dispositivos menores que 470px
+        'mobile-m': { max: '375px' }, // Para dispositivos menores que 375px
+        'mobile-s': { max: '325px' }, // Para dispositivos menores que 325px
+      },
       borderWidth: {
         1: '1px',
       },

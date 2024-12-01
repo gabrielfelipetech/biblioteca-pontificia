@@ -308,7 +308,7 @@ function toggleExpand(link) {
   transition-duration: 300ms;
 }
 .sidebar-container {
-  @apply fixed top-16 bottom-0 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 px-2 min-w-8 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto select-none;
+  @apply fixed top-16 tablet:top-14 bottom-0 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 px-2 min-w-8 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto select-none;
   @apply transition duration-500 ease-in-out;
   transition-property: width;
   .sidebar-list {
