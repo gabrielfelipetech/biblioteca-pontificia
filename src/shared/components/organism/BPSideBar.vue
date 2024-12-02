@@ -1,5 +1,7 @@
 <template>
-  <nav :class="['sidebar-container', isSideBarOpen ? 'w-96' : 'w-16']">
+  <nav
+    :class="['sidebar-container', isSideBarOpen ? 'w-96 tablet:w-80' : 'w-16']"
+  >
     <div class="sidebar-toggle" @click="toggleStateSideBar">
       <Icon
         :name="isSideBarOpen ? 'mdi:backburger' : 'mdi:menu'"

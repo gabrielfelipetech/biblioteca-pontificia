@@ -1,6 +1,10 @@
 <template>
   <header class="header-container">
-    <h1 class="tablet:text-2xl tablet:font-semibold">Biblioteca Pontificia</h1>
+    <h1
+      class="tablet:text-2xl tablet:font-semibold mobile-m:text-xl mobile-m:font-bold"
+    >
+      Biblioteca Pontificia
+    </h1>
     <Input
       v-model="searchInput"
       icon-name="mdi:magnify"
