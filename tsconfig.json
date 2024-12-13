@@ -1,6 +1,11 @@
 {
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
+    "types": [
+      "@nuxt/types",
+      "@types/nuxtjs__sitemap",
+      "@nuxtjs/sitemap/config"
+    ],
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],

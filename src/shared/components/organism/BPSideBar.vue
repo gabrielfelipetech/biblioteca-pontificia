@@ -1,74 +1,82 @@
 <template>
-  <nav
-    :class="['sidebar-container', isSideBarOpen ? 'w-96 tablet:w-80' : 'w-16']"
-  >
-    <div class="sidebar-toggle" @click="toggleStateSideBar">
-      <Icon
-        :name="isSideBarOpen ? 'mdi:backburger' : 'mdi:menu'"
-        size="1.5rem"
-      />
-    </div>
-    <ul class="sidebar-list">
-      <li v-for="link in sidebarLinks" :key="link.title">
-        <div class="sidebar-item level-1" @click.stop="toggleExpand(link)">
-          <div class="sidebar-item--icon-text">
-            <Icon
-              :name="`mdi:${link.icon}`"
-              size="1.5rem"
-              @click.stop="toggleExpand(link)"
-              @click="isSideBarOpen = true"
-            />
-            <h2 v-if="isSideBarOpen" class="text-xl font-bold">
-              {{ link.title }}
-            </h2>
-          </div>
-          <Icon
-            v-if="link.isExpandable"
-            :name="link.isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'"
-          />
-        </div>
-        <ul v-if="isSideBarOpen && link.isExpanded" class="sidebar-list-child">
-          <li v-for="child in link.children" :key="child.title">
-            <div class="sidebar-item-child" @click.stop="toggleExpand(child)">
-              <h3
-                :class="[
-                  child.children && child.children.length > 0
-                    ? 'font-semibold text-base dark:text-bp-yellow-700-light'
-                    : 'font-black text-base dark:text-bp-yellow-200-light',
-                ]"
-              >
-                {{ child.title }}
-              </h3>
+  <aside>
+    <nav
+      :class="[
+        'sidebar-container',
+        isSideBarOpen ? 'w-96 tablet:w-80' : 'w-16',
+      ]"
+    >
+      <div class="sidebar-toggle" @click="toggleStateSideBar">
+        <Icon
+          :name="isSideBarOpen ? 'mdi:backburger' : 'mdi:menu'"
+          size="1.5rem"
+        />
+      </div>
+      <ul class="sidebar-list">
+        <li v-for="link in sidebarLinks" :key="link.title">
+          <div class="sidebar-item level-1" @click.stop="toggleExpand(link)">
+            <div class="sidebar-item--icon-text">
               <Icon
-                v-if="child.isExpandable"
-                :name="
-                  child.isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'
-                "
+                :name="`mdi:${link.icon}`"
+                size="1.5rem"
+                @click.stop="toggleExpand(link)"
+                @click="isSideBarOpen = true"
               />
+              <h2 v-if="isSideBarOpen" class="text-xl font-bold">
+                {{ link.title }}
+              </h2>
             </div>
-            <ul
-              v-if="isSideBarOpen && child.isExpanded"
-              class="sidebar-list-subchild"
-            >
-              <li v-for="subchild in child.children" :key="subchild.title">
-                <div class="sidebar-item-subchild">
-                  <h4>{{ subchild.title }}</h4>
-                  <Icon
-                    v-if="subchild.isExpandable"
-                    :name="
-                      child.isExpanded
-                        ? 'mdi:chevron-down'
-                        : 'mdi:chevron-right'
-                    "
-                  />
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+            <Icon
+              v-if="link.isExpandable"
+              :name="link.isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'"
+            />
+          </div>
+          <ul
+            v-if="isSideBarOpen && link.isExpanded"
+            class="sidebar-list-child"
+          >
+            <li v-for="child in link.children" :key="child.title">
+              <div class="sidebar-item-child" @click.stop="toggleExpand(child)">
+                <h3
+                  :class="[
+                    child.children && child.children.length > 0
+                      ? 'font-semibold text-base dark:text-bp-yellow-700-light'
+                      : 'font-black text-base dark:text-bp-yellow-200-light',
+                  ]"
+                >
+                  {{ child.title }}
+                </h3>
+                <Icon
+                  v-if="child.isExpandable"
+                  :name="
+                    child.isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'
+                  "
+                />
+              </div>
+              <ul
+                v-if="isSideBarOpen && child.isExpanded"
+                class="sidebar-list-subchild"
+              >
+                <li v-for="subchild in child.children" :key="subchild.title">
+                  <div class="sidebar-item-subchild">
+                    <h4>{{ subchild.title }}</h4>
+                    <Icon
+                      v-if="subchild.isExpandable"
+                      :name="
+                        child.isExpanded
+                          ? 'mdi:chevron-down'
+                          : 'mdi:chevron-right'
+                      "
+                    />
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
 </template>
 
 <script lang="ts" setup>

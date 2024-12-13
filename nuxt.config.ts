@@ -1,6 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config';
 import { resolve } from 'pathe';
-// https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
@@ -20,14 +20,22 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
+    '@nuxtjs/sitemap', // Módulo de sitemap
   ],
   hooks: {
     'pages:extend'(pages) {
       pages.push({
-        name: 'perfil', // Nome da rota
-        path: '/perfil', // Caminho desejado na URL
-        file: resolve(__dirname, 'src/pages/profile/index.vue'), // Caminho para o componente existente
+        name: 'perfil',
+        path: '/perfil',
+        file: resolve(__dirname, 'src/pages/profile/index.vue'),
       });
+    },
+  },
+  sitemap: {
+    hostname: 'https://bibliotecapontificia.com.br',
+    gzip: true,
+    routes: async () => {
+      return ['/sobre', '/contato', '/livros'];
     },
   },
 });
