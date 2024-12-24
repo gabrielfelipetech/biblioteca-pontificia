@@ -12,69 +12,101 @@
           size="1.5rem"
         />
       </div>
-      <ul class="sidebar-list">
-        <li v-for="link in sidebarLinks" :key="link.title">
-          <div class="sidebar-item level-1" @click.stop="toggleExpand(link)">
-            <div class="sidebar-item--icon-text">
-              <Icon
-                :name="`mdi:${link.icon}`"
-                size="1.5rem"
-                @click.stop="toggleExpand(link)"
-                @click="isSideBarOpen = true"
-              />
-              <h2 v-if="isSideBarOpen" class="text-xl font-bold">
-                {{ link.title }}
-              </h2>
-            </div>
-            <Icon
-              v-if="link.isExpandable"
-              :name="link.isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'"
-            />
-          </div>
-          <ul
-            v-if="isSideBarOpen && link.isExpanded"
-            class="sidebar-list-child"
-          >
-            <li v-for="child in link.children" :key="child.title">
-              <div class="sidebar-item-child" @click.stop="toggleExpand(child)">
-                <h3
-                  :class="[
-                    child.children && child.children.length > 0
-                      ? 'font-semibold text-base dark:text-bp-yellow-700-light'
-                      : 'font-black text-base dark:text-bp-yellow-200-light',
-                  ]"
-                >
-                  {{ child.title }}
-                </h3>
+      <transition name="slideList">
+        <ul class="sidebar-list">
+          <li v-for="link in sidebarLinks" :key="link.title">
+            <div class="sidebar-item level-1" @click.stop="toggleExpand(link)">
+              <div class="sidebar-item--icon-text">
                 <Icon
-                  v-if="child.isExpandable"
-                  :name="
-                    child.isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'
-                  "
+                  class="chevron-icon"
+                  :class="{ 'chevron-rotated': link.isExpanded }"
+                  :name="'mdi:chevron-right'"
+                  size="1.5rem"
+                  @click.stop="toggleExpand(link)"
+                  @click="isSideBarOpen = true"
                 />
+                <h2 v-if="isSideBarOpen" class="text-xl font-bold">
+                  {{ link.title }}
+                </h2>
               </div>
+              <Icon
+                v-if="link.isExpandable"
+                class="chevron-icon"
+                :class="{ 'chevron-rotated': link.isExpanded }"
+                :name="'mdi:chevron-right'"
+              />
+            </div>
+            <transition name="slideList">
               <ul
-                v-if="isSideBarOpen && child.isExpanded"
-                class="sidebar-list-subchild"
+                v-if="isSideBarOpen && link.isExpanded"
+                class="sidebar-list-child"
               >
-                <li v-for="subchild in child.children" :key="subchild.title">
-                  <div class="sidebar-item-subchild">
-                    <h4>{{ subchild.title }}</h4>
+                <li v-for="child in link.children" :key="child.title">
+                  <div
+                    class="sidebar-item-child"
+                    @click.stop="toggleExpand(child)"
+                  >
+                    <h3
+                      :class="[
+                        child.children && child.children.length > 0
+                          ? 'font-semibold text-base dark:text-bp-yellow-700-light'
+                          : 'font-black text-base dark:text-bp-yellow-200-light',
+                      ]"
+                    >
+                      {{ child.title }}
+                    </h3>
                     <Icon
-                      v-if="subchild.isExpandable"
-                      :name="
-                        child.isExpanded
-                          ? 'mdi:chevron-down'
-                          : 'mdi:chevron-right'
-                      "
+                      v-if="child.isExpandable"
+                      class="chevron-icon"
+                      :class="{ 'chevron-rotated': child.isExpanded }"
+                      :name="'mdi:chevron-right'"
                     />
                   </div>
+                  <transition name="slideList">
+                    <ul
+                      v-if="isSideBarOpen && child.isExpanded"
+                      class="sidebar-list-subchild"
+                    >
+                      <li
+                        v-for="subchild in child.children"
+                        :key="subchild.title"
+                      >
+                        <div
+                          class="sidebar-item-subchild"
+                          @click.stop="toggleExpand(subchild)"
+                        >
+                          <h4>{{ subchild.title }}</h4>
+                          <Icon
+                            v-if="subchild.isExpandable"
+                            class="chevron-icon"
+                            :class="{ 'chevron-rotated': subchild.isExpanded }"
+                            :name="'mdi:chevron-right'"
+                          />
+                        </div>
+                        <transition name="slideList">
+                          <ul
+                            v-if="isSideBarOpen && subchild.isExpanded"
+                            class="sidebar-list-subsubchild"
+                          >
+                            <li
+                              v-for="subsubchild in subchild.children"
+                              :key="subsubchild.title"
+                            >
+                              <div class="sidebar-item-subsubchild">
+                                <h5>{{ subsubchild.title }}</h5>
+                              </div>
+                            </li>
+                          </ul>
+                        </transition>
+                      </li>
+                    </ul>
+                  </transition>
                 </li>
               </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
+            </transition>
+          </li>
+        </ul>
+      </transition>
     </nav>
   </aside>
 </template>
@@ -207,6 +239,8 @@ const sidebarLinks = ref<SidebarLink[]>([
           {
             title: 'A Nosso Senhor',
             isExpandable: true,
+            isExpanded: false,
+
             children: [
               {
                 title: 'Preciossimo Sangue',
@@ -218,6 +252,8 @@ const sidebarLinks = ref<SidebarLink[]>([
           {
             title: 'A Nossa Senhora',
             isExpandable: true,
+            isExpanded: false,
+
             children: [
               {
                 title: 'Ladainha de Nossa Senhora',
@@ -303,6 +339,7 @@ const toggleStateSideBar = () => {
   isSideBarOpen.value = !isSideBarOpen.value;
 };
 function toggleExpand(link) {
+  console.log(link);
   if (link.isExpandable) {
     link.isExpanded = !link.isExpanded;
   }
@@ -350,9 +387,45 @@ function toggleExpand(link) {
           @apply border-l-1 border-black -ml-px dark:bg-bp-blue-700-light bg-bp-yellow-200-light cursor-pointer;
           transition-duration: 300ms;
         }
+        .sidebar-list-subsubchild {
+          @apply border-l ml-3;
+          @apply flex flex-col gap-1 my-2;
+          .sidebar-item-subsubchild {
+            @apply flex items-center justify-between pl-3 py-1 pr-4 rounded-e-lg;
+          }
+          .sidebar-item-subsubchild:hover {
+            @apply border-l-1 border-black -ml-px dark:bg-bp-blue-700-light bg-bp-yellow-200-light cursor-pointer;
+            transition-duration: 300ms;
+          }
+        }
       }
     }
   }
+}
+.slideList-enter-active,
+.slideList-leave-active {
+  transition:
+    max-height 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.slideList-enter-from,
+.slideList-leave-to {
+  max-height: 0;
+  opacity: 0;
+}
+
+.slideList-enter-to,
+.slideList-leave-from {
+  max-height: 1000px;
+  opacity: 1;
+}
+.chevron-icon {
+  transition: transform 0.3s ease-in-out;
+}
+.chevron-rotated {
+  transform: rotate(90deg);
 }
 
 .sidebar-item:hover {
