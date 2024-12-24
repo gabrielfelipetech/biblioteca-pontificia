@@ -112,7 +112,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { sidebarLinks } from '../../utils/mocks/sibeBarLinks.ts';
+import { sidebarLinks } from '../../utils/mocks/sibeBarLinks';
 
 const isSideBarOpen = ref(true);
 const toggleStateSideBar = () => {
