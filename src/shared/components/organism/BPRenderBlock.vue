@@ -38,7 +38,7 @@ const t = (m?: Record<string, string>) =>
       {{ t(block.text) }}
     </template>
     <template v-if="block.children?.length">
-      <RenderBlock
+      <BPRenderBlock
         v-for="(c, i) in block.children"
         :key="i"
         :block="c"

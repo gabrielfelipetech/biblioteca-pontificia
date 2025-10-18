@@ -1,0 +1,812 @@
+{
+  "schemaVersion": "1.0",
+  "id": "via-sacra-dom-castro-mayer",
+  "type": "devotional",
+  "slug": "via-sacra",
+  "langs": ["pt", "la", "en", "es", "fr", "it"],
+  "meta": {
+    "title": { "pt": "Via-Sacra", "la": "Via Crucis" },
+    "subtitle": { "pt": "Escrita por Dom Castro Mayer" },
+    "author": "Dom Antônio de Castro Mayer",
+    "source": "Apostoli Christi",
+    "date": "2023-02-23",
+    "tags": ["devocionario", "via-sacra"],
+    "images": { "cover": "/images/via-sacra/cover.jpg" }
+  },
+  "content": [
+    {
+      "type": "section",
+      "key": "oracao-preparatoria",
+      "title": { "pt": "Oração preparatória" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Meu Senhor Jesus Cristo, disponho-me a acompanhar-Vos no caminho que trilhastes do pretório de Pilatos ao Calvário, para Vos imolardes por minha salvação. Peço-Vos a graça de nos conceder grande dor e arrependimento de ter pecado, causando Vossos atrozes sofrimentos, e que Vosso Sangue preciosíssimo infunda em minha alma o propósito firme de nunca mais pecar."
+          }
+        },
+        {
+          "type": "rubric",
+          "text": { "pt": "Obs.: Posturas do fiel durante a Via-Sacra." }
+        },
+        {
+          "type": "list",
+          "children": [
+            {
+              "type": "list-item",
+              "text": { "pt": "De pé: durante o Cântico e a Leitura do Texto." }
+            },
+            {
+              "type": "list-item",
+              "text": {
+                "pt": "De joelhos: durante a leitura do texto da 12.ª Estação e demais orações."
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-1",
+      "title": { "pt": "I Estação — Jesus é condenado à morte" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "A morrer crucificado\nTeu Jesus é condenado\nPor teus crimes, pecador."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Cedendo aos clamores dos judeus, Pilatos condenou Jesus à morte na Cruz. O que levou os judeus a pedirem a morte de Jesus Cristo foi sua infidelidade. Quiseram seguir uma religião do seu agrado, e não a Religião revelada pelo Filho de Deus humanado. Nisto imitaram a desobediência de Adão e a rejeição da vontade de Deus."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Nós estamos na mesma miserável condição. Humilhemo-nos e peçamos a Nossa Senhora nos alcance a graça de sermos fiéis à Santíssima Vontade de Seu Divino Filho."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "R. Pesa-me, Senhor, de todo o meu coração ter ofendido a Vossa infinita bondade, proponho com Vossa graça a emenda, e espero que me perdoeis por Vossa infinita misericórdia. Amém."
+          }
+        },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-2",
+      "title": { "pt": "II Estação — Jesus com a Cruz às costas" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Com a cruz é carregado\nE do peso acabrunhado:\nVai morrer por teu amor."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Depois da vigília no Horto das Oliveiras e da atrocíssima flagelação, Jesus se submete ainda ao sacrifício de carregar a Cruz até ao Calvário."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Jesus o fez para reparar os nossos pecados. Aprendamos que, sem sacrifício e o habitual espírito de mortificação, nossa religião é vã, vazia, sem merecimento."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Peçamos a Nossa Senhora a graça de aceitar com alegria as mortificações que nos impõe o cumprimento de nossos deveres de estado."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-3",
+      "title": { "pt": "III Estação — Jesus cai pela primeira vez" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Pela Cruz tão oprimido,\nCai Jesus desfalecido\nPela tua salvação."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Já esgotado pela insônia, fome e perda de sangue, Jesus sucumbe ao peso da cruz e cai por terra."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Nos desígnios de Deus, esta queda é para descontar as ofensas de nossos pecados, e para nos alertar contra nossa presunção. Por nós mesmos só vamos de pecado em pecado, de queda em queda."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Peçamos a Nossa Senhora nos alcance a graça da vigilância na oração e na fuga das ocasiões de pecado."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-4",
+      "title": {
+        "pt": "IV Estação — Jesus encontra-se com sua Mãe Santíssima"
+      },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "De Maria lacrimosa,\nSua Mãe tão dolorosa,\nVê a imensa compaixão."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Na agonia do Horto do Getsêmani e no processo infame a que foi submetido Seu Divino Filho, esteve ausente Maria Santíssima. Quando, porém, vai Ele consumar o Sacrifício da Redenção do mundo, Ela se apresenta. É que ambos, Jesus e Maria, nos decretos do Altíssimo, estão como identificados na missão redentora do homem. É como Mãe dos remidos que Maria coopera na obra da salvação."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "É a esta Mãe que recorremos para nos assegurar a fidelidade a Seu Divino Filho, em meio da sociedade paganizada que nos envolve."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-5",
+      "title": { "pt": "V Estação — Simão Cirineu ajuda Jesus a levar a Cruz" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Em extremo desmaiado,\nDeve auxílio, tão cansado,\nReceber do Cirineu."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "No breve trecho, no caminho do Calvário, convencem-se os verdugos do Salvador de que, pela extrema debilidade, consequência das torturas a que tinha sido submetido, Jesus Cristo não estava em condições de carregar o Seu patíbulo até ao cimo do monte. Forçaram Simão de Cirene a carregar a cruz do Salvador."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Nossa salvação, por vontade de Deus, não se realiza sem nossa cooperação. Precisamos, a nosso modo, ajudar Jesus Cristo a carregar a Cruz. E o fazemos quando não nos conformamos com a maneira de proceder de uma sociedade que, na prática, se afastou da austeridade cristã. Que Nossa Senhora nos alcance esta graça."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-6",
+      "title": { "pt": "VI Estação — Verônica enxuga a face de Jesus" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "O Seu rosto ensanguentado,\nPor Verônica enxugado,\nEis no pano apareceu."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Do meio daquela multidão sádica que formava o séquito nefando do Salvador no caminho do Calvário, destaca-se uma mulher forte que, arrostando a arrogância dos soldados, aproxima-se de Jesus e com uma toalha Lhe limpa o sagrado rosto desfigurado pelo sangue da coroa de espinhos, pelos escarros dos sicários do Sinédrio e pelas bofetadas da soldadesca bestial."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Admiremos envergonhados a fortaleza desta mulher e peçamos a Nossa Senhora que nos alcance a graça de nunca trairmos por respeito humano nossa religião, com nosso procedimento."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-7",
+      "title": { "pt": "VII Estação — Jesus cai pela segunda vez" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Outra vez desfalecido,\nPelas dores abatido,\nCai em terra o Salvador."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Não obstante o auxílio do Cirineu, a enorme fraqueza do Salvador fê-Lo cair uma segunda vez no caminho do Calvário."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Esta segunda queda do Salvador lembra nossas repetidas culpas e, de outro lado, a infinita misericórdia de Deus que só espera nosso arrependimento para nos soerguer."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Que a fraqueza do Redentor que O prostrou por terra seja a nossa fortaleza, e não nos permita aceitar um meio-catolicismo ao sabor da sensualidade, feito mais de quedas do que de virtudes."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-8",
+      "title": { "pt": "VIII Estação — Jesus consola as filhas de Jerusalém" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Das matronas piedosas,\nDe Sião filhas chorosas\nÉ Jesus consolador."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Ao ver os tormentos a que os sicários do Sinédrio submetiam Jesus no caminho do Calvário, umas piedosas mulheres de Jerusalém não contiveram as lágrimas e expandiram em altos prantos suas consternações. Jesus, agradecido, exortou-as a que tornassem profícuos seus prantos, chorando mais por elas e seus filhos do que por Ele."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "O que Jesus deseja é a nossa salvação. Por isso ferem-Lhe mais nossos pecados do que O afligem as chagas de Seu corpo ou Lhe pesa a coroa de espinhos. “Chorai por vós e por vossos filhos” — nos repete o Senhor, quando nos vê mais preocupados com nossas moléstias e os bens terrenos do que com os nossos pecados. Abra-nos os olhos a Virgem Santíssima para purificar nosso catolicismo."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-9",
+      "title": { "pt": "IX Estação — Jesus cai pela terceira vez" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Cai terceira vez prostrado,\nPelo peso redobrado\nDos pecados e da cruz."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Novamente a extrema debilidade prostra a Jesus por terra. É mais uma humilhação que se junta a todas as outras, igualmente atrozes, a que se sujeitou o Salvador na Sua Paixão."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Fê-lo por nosso amor, nossa salvação, mas também para que compreendêssemos que, sem a aceitação amorosa das humilhações que Nosso Senhor nos envia, não participamos da Redenção, porquanto não nos assemelhamos a Jesus Cristo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Que a Virgem Santíssima, Mãe das Dores, nos compenetre desta verdade."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-10",
+      "title": { "pt": "X Estação — Jesus é despojado de Suas vestes" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Dos vestidos despojado,\nPor verdugos maltratado\nEu Vos vejo, meu Jesus."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Chegado ao Calvário, foi Jesus despudoradamente despido de Suas vestes pela soldadesca imunda."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Jesus, o cândido lírio da inocência, mais branco e mais puro do que o mais puro arminho e que a mais branca neve, é apresentado nu aos olhos da multidão, tendo apenas para velar Seu corpo sagrado a túnica do Seu Sangue sacrossanto."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Foi certamente a mais sensível das humilhações a que nossos pecados submeteram o Filho de Deus. No entanto, é a humilhação a que mesmo as pessoas que se dizem cristãs e tementes a Deus, continuam a submeter o Divino Salvador. A Virgem Mãe, pureza alvinitente, nos alcance o apego ao recato, à modéstia, ao comedimento, que são condições indispensáveis para a prática da virtude."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-11",
+      "title": { "pt": "XI Estação — Jesus é pregado na Cruz" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Sois por mim à Cruz pregado,\nInsultado, blasfemado\nCom cegueira e com furor."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Estirado Jesus sobre a Cruz, esticaram-Lhe violentamente os membros e os cravaram no madeiro com grossos e pontiagudos cravos."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "O suplício da Cruz era reservado aos escravos, com os quais era legítimo não ter a menor comiseração. Além disso, Jesus Cristo foi crucificado entre dois ladrões, como a indicar — diz São Boaventura — que era o pior deles."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Tudo concorria para levar aos extremos os sofrimentos físicos e morais do Divino Salvador. Cravado na Cruz após a flagelação e coroação de espinhos, não é possível imaginar sofrimentos mais atrozes. Considerado malfeitor vil e abjeto como os crucificados, é impossível humilhação maior."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Pois esses sofrimentos e humilhações foram o preço de nossos pecados. Foi assim que Ele nos libertou da escravidão do demônio e da morte eterna, e nos mereceu o Céu no seio de Deus."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Com o coração agradecido, aprendamos a apreciar as humilhações e os sofrimentos com que Deus purifica a nossa alma, especialmente quando exigidos pelo cumprimento dos deveres de nosso estado."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-12",
+      "title": { "pt": "XII Estação — Jesus morre na Cruz" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Por meus crimes padecestes.\nMeu Jesus, por mim morrestes.\nComo é grande a minha dor!"
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Depois de três horas de tormentosa agonia, Jesus inclinou a cabeça e morreu."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Consumou-se o sacrifício. O véu do templo rasgou-se de alto a baixo, anunciando a abolição da lei mosaica, substituída pela lei de Cristo que a aperfeiçoa e supera, e atinge todos os homens."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Exclama São Paulo: “Estou pregado na cruz com Cristo.” É este também o ideal da vida do fiel: unir-se a Jesus Crucificado. Ou seja, tomar o caminho da renúncia de si mesmo na obediência aos legítimos superiores, nas humilhações, no espírito de mortificação, nos sacrifícios exigidos para o cumprimento dos próprios deveres. São as disposições da alma que pedimos à Virgem Santíssima presente ao pé da Cruz."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-13",
+      "title": { "pt": "XIII Estação — Jesus é descido da Cruz" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Do madeiro Vos tiraram\nE à Mãe Vos entregaram,\nCom que dor e compaixão."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Nicodemos e José de Arimatéia obtiveram de Pilatos o corpo de Jesus. Cuidadosamente O retiraram da Cruz e O entregaram à Sua Mãe, Maria Santíssima, a quem Ele pertencia por direito materno."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "A Virgem Mãe contemplou em silêncio a retidão profunda daquele rosto sempre senhor de si mesmo, embora desfigurado pelos atrozes sofrimentos e morte violenta. Contemplou, adorou, e O apresentou ao Padre Eterno como propiciação pelos nossos pecados, nossos de Seus filhos adotivos."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Habituemo-nos a viver com Maria. Ela nos levará a Jesus. Ela nos dará Sua graça e Seu vigor para triunfarmos da multidão dos atrativos para o mal que emergem de uma sociedade imersa no egoísmo e na sensualidade."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "station-14",
+      "title": { "pt": "XIV Estação — Jesus é depositado no sepulcro" },
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "No sepulcro Vos deixaram,\nSepultado Vos choraram,\nMagoado o coração."
+          }
+        },
+        {
+          "type": "antiphon",
+          "text": {
+            "pt": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos;\nPorque pela Vossa Santa Cruz remistes o mundo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Atendida a exigência de Seu direito materno, Maria Santíssima acompanha o enterro de Seu Divino Filho organizado por Nicodemos e José de Arimatéia. Foi Ele deposto num sepulcro novo, aberto na rocha, no qual ninguém tinha ainda sido sepultado."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Sobre todos desceu um ambiente de paz que sepultou o alarido da multidão infrene, quando pedia a morte do Salvador."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "A paz do Senhor é a paz de consciência que repercute no homem todo, dando-lhe a sensação de um profundo bem-estar. Esta paz encontramo-la quando desalojamos de nosso coração os sentimentos egoístas e sensuais para enchê-lo de caridade de Nosso Senhor Jesus Cristo. Virtude que obteremos pela intercessão de Maria Santíssima."
+          }
+        },
+        { "type": "prayer", "text": { "pt": "Ave Maria…" } },
+        { "type": "response", "text": { "pt": "R. Pesa-me, Senhor…" } },
+        {
+          "type": "response",
+          "text": { "pt": "Compadecei-Vos de nós, Senhor!" }
+        },
+        { "type": "response", "text": { "pt": "R. Compadecei-Vos de nós!" } },
+        {
+          "type": "response",
+          "text": {
+            "pt": "Que as almas dos fiéis defuntos, por misericórdia de Deus, descansem em paz."
+          }
+        },
+        { "type": "response", "text": { "pt": "R. Amém." } }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "hino-final",
+      "blocks": [
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Meu Jesus, por Vossos passos,\nRecebei-me em Vossos braços,\nA mim, pobre pecador."
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "section",
+      "key": "oracao-final",
+      "title": { "pt": "Oração final à Virgem Dolorosa" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Ó Maria, minha Mãe, compartilho Convosco as dores e sofrimentos que suportastes no corpo e na alma, ao acompanhardes Vosso Divino Filho no caminho do Calvário, e ao assistirdes à Sua dolorosa e humilhante morte na Cruz."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Peço-Vos que me guardeis sob Vossa proteção para que não torne a pecar, renovando a Paixão de Vosso Divino Filho."
+          }
+        },
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "(Padre-Nosso e Ave-Maria, na intenção do Sumo Pontífice para se lucrarem as indulgências)."
+          }
+        },
+        {
+          "type": "hymn",
+          "text": {
+            "pt": "Pela Virgem Dolorosa,\nVossa Mãe tão piedosa,\nPerdoai-me, meu Jesus!"
+          }
+        }
+      ]
+    }
+  ]
+}
