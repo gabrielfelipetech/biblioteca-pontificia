@@ -35,6 +35,7 @@
                 :name="'mdi:chevron-right'"
               />
             </div>
+
             <transition name="slideList">
               <ul
                 v-if="isSideBarOpen && link.isExpanded"
@@ -43,7 +44,11 @@
                 <li v-for="child in link.children" :key="child.title">
                   <div
                     class="sidebar-item-child"
-                    @click.stop="toggleExpand(child)"
+                    @click.stop="
+                      child.isExpandable
+                        ? toggleExpand(child)
+                        : tryNavigate(child)
+                    "
                   >
                     <h3
                       :class="[
@@ -61,6 +66,7 @@
                       :name="'mdi:chevron-right'"
                     />
                   </div>
+
                   <transition name="slideList">
                     <ul
                       v-if="isSideBarOpen && child.isExpanded"
@@ -72,7 +78,11 @@
                       >
                         <div
                           class="sidebar-item-subchild"
-                          @click.stop="toggleExpand(subchild)"
+                          @click.stop="
+                            subchild.isExpandable
+                              ? toggleExpand(subchild)
+                              : tryNavigate(subchild)
+                          "
                         >
                           <h4>{{ subchild.title }}</h4>
                           <Icon
@@ -82,6 +92,7 @@
                             :name="'mdi:chevron-right'"
                           />
                         </div>
+
                         <transition name="slideList">
                           <ul
                             v-if="isSideBarOpen && subchild.isExpanded"
@@ -91,7 +102,10 @@
                               v-for="subsubchild in subchild.children"
                               :key="subsubchild.title"
                             >
-                              <div class="sidebar-item-subsubchild">
+                              <div
+                                class="sidebar-item-subsubchild"
+                                @click.stop="tryNavigate(subsubchild)"
+                              >
                                 <h5>{{ subsubchild.title }}</h5>
                               </div>
                             </li>
@@ -110,21 +124,38 @@
   </aside>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from 'vue';
-import { sidebarLinks as rawSidebarLinks } from '../../utils/mocks/sibeBarLinks';
-
+import { useRouter } from 'vue-router';
+import {
+  sidebarLinks as rawSidebarLinks,
+  type SidebarLink,
+} from '../../utils/mocks/sibeBarLinks';
 const sidebarLinks = ref(rawSidebarLinks);
-
 const isSideBarOpen = ref(true);
+const router = useRouter();
+
 const toggleStateSideBar = () => {
   isSideBarOpen.value = !isSideBarOpen.value;
 };
-function toggleExpand(link) {
-  console.log(link);
-  if (link.isExpandable) {
-    link.isExpanded = !link.isExpanded;
-  }
+
+function toggleExpand(link: SidebarLink) {
+  if (link.isExpandable) link.isExpanded = !link.isExpanded;
+}
+
+function slugify(t: string) {
+  return t
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+async function tryNavigate(link: SidebarLink) {
+  if (!link.isRequestable) return;
+  const s = link.slug || slugify(link.title);
+  const sec = link.section || 'devocionario';
+  await router.push(`/${sec}/${s}`);
 }
 </script>
 

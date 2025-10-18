@@ -1,17 +1,5 @@
 <template>
-  <div class="">
-    <BPHeader />
-    <BPSideBar />
-  </div>
+  <main class="max-w-6xl mx-auto p-4 opacity-70">
+    Selecione um item no menu.
+  </main>
 </template>
-<script setup lang="ts">
-import BPHeader from '@/shared/components/organism/BPHeader.vue';
-import { useDarkMode } from '@/shared/composables/useDarkMode';
-import { onBeforeMount } from 'vue';
-import BPSideBar from '~/shared/components/organism/BPSideBar.vue';
-
-const { verifyLocalStorage } = useDarkMode();
-onBeforeMount(() => {
-  verifyLocalStorage();
-});
-</script>
