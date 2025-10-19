@@ -3,7 +3,7 @@
     <BPHeader />
     <div class="flex">
       <BPSideBar />
-      <div class="flex-1 p-4">
+      <div class="flex-1 p-4 mt-12">
         <NuxtPage />
       </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <aside>
+  <aside class="sidebar">
     <nav
       :class="[
         'sidebar-container',
@@ -167,48 +167,50 @@ async function tryNavigate(link: SidebarLink) {
   @apply bg-bp-yellow-200-light dark:bg-bp-blue-700-light;
   transition-duration: 300ms;
 }
-.sidebar-container {
-  @apply fixed top-16 tablet:top-14 bottom-0 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 px-2 min-w-8 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto select-none;
+.sidebar {
+  @apply mt-16 top-16 tablet:top-14 bottom-0 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 px-2 min-w-8 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto select-none;
   @apply transition duration-500 ease-in-out;
   transition-property: width;
-  .sidebar-list {
-    @apply flex flex-col gap-1 mt-3 ml-2;
-    .sidebar-item {
-      @apply flex justify-between items-center cursor-pointer py-1 pr-4 pl-2 rounded-lg;
-      &--icon-text {
-        @apply flex gap-2 items-center;
-      }
-    }
-    .sidebar-list-child {
-      @apply ml-5 border-l;
-      @apply flex flex-col gap-1 my-2;
-
-      .sidebar-item-child {
-        @apply flex items-center justify-between py-1 cursor-pointer pl-6 pr-4 rounded-e-lg;
-      }
-      .sidebar-item-child:hover {
-        @apply dark:bg-bp-blue-700-light bg-bp-yellow-200-light  border-l-1 border-black -ml-px;
-        transition-duration: 300ms;
-      }
-      .sidebar-list-subchild {
-        @apply border-l ml-6;
-        @apply flex flex-col gap-1 my-2;
-        .sidebar-item-subchild {
-          @apply flex items-center justify-between pl-3 py-1 pr-4 rounded-e-lg;
+  .sidebar-container {
+    .sidebar-list {
+      @apply flex flex-col gap-1 mt-3 ml-2;
+      .sidebar-item {
+        @apply flex justify-between items-center cursor-pointer py-1 pr-4 pl-2 rounded-lg;
+        &--icon-text {
+          @apply flex gap-2 items-center;
         }
-        .sidebar-item-subchild:hover {
-          @apply border-l-1 border-black -ml-px dark:bg-bp-blue-700-light bg-bp-yellow-200-light cursor-pointer;
+      }
+      .sidebar-list-child {
+        @apply ml-5 border-l;
+        @apply flex flex-col gap-1 my-2;
+
+        .sidebar-item-child {
+          @apply flex items-center justify-between py-1 cursor-pointer pl-6 pr-4 rounded-e-lg;
+        }
+        .sidebar-item-child:hover {
+          @apply dark:bg-bp-blue-700-light bg-bp-yellow-200-light  border-l-1 border-black -ml-px;
           transition-duration: 300ms;
         }
-        .sidebar-list-subsubchild {
-          @apply border-l ml-3;
+        .sidebar-list-subchild {
+          @apply border-l ml-6;
           @apply flex flex-col gap-1 my-2;
-          .sidebar-item-subsubchild {
+          .sidebar-item-subchild {
             @apply flex items-center justify-between pl-3 py-1 pr-4 rounded-e-lg;
           }
-          .sidebar-item-subsubchild:hover {
+          .sidebar-item-subchild:hover {
             @apply border-l-1 border-black -ml-px dark:bg-bp-blue-700-light bg-bp-yellow-200-light cursor-pointer;
             transition-duration: 300ms;
+          }
+          .sidebar-list-subsubchild {
+            @apply border-l ml-3;
+            @apply flex flex-col gap-1 my-2;
+            .sidebar-item-subsubchild {
+              @apply flex items-center justify-between pl-3 py-1 pr-4 rounded-e-lg;
+            }
+            .sidebar-item-subsubchild:hover {
+              @apply border-l-1 border-black -ml-px dark:bg-bp-blue-700-light bg-bp-yellow-200-light cursor-pointer;
+              transition-duration: 300ms;
+            }
           }
         }
       }

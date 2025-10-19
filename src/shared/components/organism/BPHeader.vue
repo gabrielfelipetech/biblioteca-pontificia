@@ -1,7 +1,8 @@
 <template>
   <header class="header-container">
     <h1
-      class="tablet:text-2xl tablet:font-semibold mobile-m:text-xl mobile-m:font-bold"
+      class="tablet:text-2xl tablet:font-semibold mobile-m:text-xl mobile-m:font-bold cursor-pointer"
+      @click="goToHome()"
     >
       Biblioteca Pontificia
     </h1>
@@ -19,7 +20,12 @@
 import Input from '../atom/BPInput.vue';
 import { ref } from 'vue';
 import UserMenu from './userMenu.vue';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
+const goToHome = () => {
+  router.push('/');
+};
 const searchInput = ref('');
 </script>
 <style lang="scss" scoped>

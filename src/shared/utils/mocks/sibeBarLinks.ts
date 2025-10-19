@@ -63,4 +63,60 @@ export const sidebarLinks: SidebarLink[] = [
       },
     ],
   },
+  {
+    title: 'Documentos Papais',
+    isExpandable: true,
+    icon: 'book-cross',
+    isExpanded: false,
+    children: [
+      {
+        title: 'Papa Pio XII',
+        isExpandable: true,
+        isExpanded: false,
+        children: [
+          {
+            title: 'Mediator Dei',
+            isRequestable: true,
+            slug: 'mediator-dei',
+          },
+        ],
+      },
+      {
+        title: 'Papa Pio XI',
+        isExpandable: true,
+        isExpanded: false,
+        children: [
+          {
+            title: 'Mediator Dei',
+            isRequestable: true,
+            slug: 'mediator-dei',
+          },
+        ],
+      },
+      {
+        title: 'Papa Bento XV',
+        isExpandable: true,
+        isExpanded: false,
+        children: [
+          {
+            title: 'Mediator Dei',
+            isRequestable: true,
+            slug: 'mediator-dei',
+          },
+        ],
+      },
+      {
+        title: 'Papa São Pio X',
+        isExpandable: true,
+        isExpanded: false,
+        children: [
+          {
+            title: 'Pascendi',
+            isRequestable: true,
+            slug: 'mediator-dei',
+          },
+        ],
+      },
+    ],
+  },
 ];
