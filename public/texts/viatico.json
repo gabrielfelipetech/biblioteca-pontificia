@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viaticum",
+  "type": "ritual",
+  "slug": "viatico-extrema-uncao",
+  "langs": ["pt", "la"],
+  "meta": {
+    "title": { "pt": "Viático (Comunhão aos enfermos)", "la": "Viaticum" },
+    "subtitle": { "pt": "Ritual segundo o uso tradicional" },
+    "tags": ["sacramentos", "viático", "extrema-unção"]
+  },
+  "content": [
+    {
+      "type": "section",
+      "key": "entrada",
+      "title": { "pt": "Viático, Extrema-unção" },
+      "blocks": [
+        {
+          "type": "rubric",
+          "text": { "pt": "O Sacerdote, entrando em casa do enfermo, diz:" }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Pax huic dómui.",
+            "pt": "℣. A paz esteja nesta casa."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et ómnibus habitántibus in ea.",
+            "pt": "℟. E em todos seus habitantes."
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "asperges",
+      "title": { "pt": "Asperges Me", "la": "Asperges Me" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Asperges me, Dómine, hyssópo et mundabor: lávabis me, et super nivem dealbábor.",
+            "pt": "Aspergir-me-eis, Senhor, com o hissope e ficarei puro; lavar-me-eis e ficarei alvo, como a neve."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Osténde nobis, Dómine, misericórdiam tuam.",
+            "pt": "℣. Mostrai, Senhor, a vossa misericórdia."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et salutáre tuum da nobis.",
+            "pt": "℟. E dai-nos a salvação."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dómine, exáudi oratiónem meam.",
+            "pt": "℣. Ouvi, Senhor, a minha oração."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et clamor meus ad te véniat.",
+            "pt": "℟. E que meu clamor chegue até Vós."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dóminus vobíscum.",
+            "pt": "℣. O Senhor seja convosco."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et cum spíritu tuo.",
+            "pt": "℟. E com vosso espírito."
+          }
+        },
+        { "type": "prayer", "text": { "la": "Orémus.", "pt": "Oremos." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Exáudi nos, Dómine sancte, Pater omnípotens, ætérne Deus, et míttere dignéris Sanctum Angelum tuum de cælis, qui custódiat, fóveat, prótegat, vísitet atque deféndat omnes habitantes in hoc habitáculo. Per Christum Dóminum nostrum. Amen.",
+            "pt": "Ouvi-nos, Senhor santo, Pai omnipotente, Deus eterno, e dignai-Vos enviar do céu o vosso Santo Anjo, para que ele guarde, conserve, proteja, visite e defenda todos aqueles que se encontram neste templo. Por Cristo, nosso Senhor. Amen."
+          }
+        },
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "O Acólito diz o «Confiteor Deo…» e o Sacerdote, tendo dado as Absolvições, continua:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "communio",
+      "title": { "pt": "Recepção da Comunhão", "la": "Communio (Viaticum)" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Ecce Agnus Dei, ecce qui tollit peccáta mundi.",
+            "pt": "℣. Eis o Cordeiro de Deus, eis Aquele que tira os pecados do mundo."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur ánima mea.",
+            "pt": "℟. Senhor, eu não sou digno de que entreis na minha morada, mas dizei uma só palavra e a minha alma será salva."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Accípe frater (soror), Viaticum Córporis Dómini nostri Jesu Christi, qui te custódiat ab hoste malígno, et perdúcate in vitam ætérnam.",
+            "pt": "Recebei, meu irmão (ou minha irmã), o Viático do Corpo de Nosso Senhor Jesus Cristo, a fim de que vos guie até à vida eterna."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dóminus vobíscum.",
+            "pt": "℣. O Senhor seja convosco."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et cum spíritu tuo.",
+            "pt": "℟. E com vosso espírito."
+          }
+        },
+        { "type": "prayer", "text": { "la": "Orémus.", "pt": "Oremos." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Dómine sancte, Páter omnípotens, ætérne Deus, te fidéliter deprecámur, ut accipiénti fratri nostro (soróri nostræ) sacrosánctum Corpus Dómini nostri Jesu Christi Fílii tui, tam córpori, quam ánimæ prosit ad remédium sempitérnum: Qui tecum vivit et regnat in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum.",
+            "pt": "Senhor santo, Pai omnipotente, Deus eterno, Vos rogamos com confiança que o Corpo Santíssimo de nosso Senhor, que o nosso irmão (ou irmã) acaba de receber, lhe seja remédio eficaz, tanto para a sua alma como para o seu corpo, a fim de que lhe sirva para a eternidade: Ele, que, sendo Deus, convosco vive e reina por todos os séculos dos séculos."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    }
+  ]
+}

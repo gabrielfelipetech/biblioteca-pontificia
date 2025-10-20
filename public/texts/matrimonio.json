@@ -1,0 +1,518 @@
+{
+  "schemaVersion": "1.0",
+  "id": "matrimonio-ritual",
+  "type": "ritual",
+  "slug": "matrimonio",
+  "langs": ["pt", "la"],
+  "meta": {
+    "title": { "pt": "Matrimónio", "la": "Matrimonium" },
+    "subtitle": { "pt": "Ritual segundo o uso tradicional" },
+    "tags": ["sacramentos", "matrimónio"],
+    "date": "2025-01-01"
+  },
+  "content": [
+    {
+      "type": "section",
+      "key": "introducao",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Os noivos, tendo entrado na igreja e depois de haverem feito oração diante do Altar do Santíssimo Sacramento dirigem-se para o Altar onde será celebrado o Matrimónio, ficando o noivo à direita da noiva, com a face para o Altar, e aguardando a chegada do Sacerdote. Se os noivos usarem luvas devem tirá-las. As testemunhas do Matrimónio tomarão lugar ao lado ou atrás dos noivos."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Tendo chegado o Sacerdote, convenientemente preparado, todos se erguem excepto os noivos. Aquele, após uma curta oração, em particular, volta-se para o noivo, interrogando-o:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "consentimento",
+      "title": { "pt": "Consentimento dos Noivos" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "℣. N. quereis receber N., aqui presente, como vossa legítima esposa, segundo o rito da Santa Madre Igreja?"
+          }
+        },
+        { "type": "response", "text": { "pt": "℟. Quero!" } },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "E logo, dirigindo-se à noiva, interroga-a também:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "℣. N. quereis receber N., aqui presente, como vossa legítima esposo, segundo o rito da Santa Madre Igreja?"
+          }
+        },
+        { "type": "response", "text": { "pt": "℟. Quero!" } }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "uniao-das-maos",
+      "title": { "pt": "União das Mãos" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Após este consentimento mútuo, os nubentes unem as suas mãos direitas, pelo lado palmar destas. E o Sacerdote diz:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Ego conjúngo vos in matrimónium, in nómine Patris, ✠ et Fílii, et Spíritus Sancti.",
+            "pt": "Eu vos uno em Matrimónio, em Nome do Pai, e do Filho ✠, e do Espírito Santo."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } },
+        {
+          "type": "rubric",
+          "text": { "pt": "O Sacerdote asperge com Água benta os noivos." }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "bencao-anel",
+      "title": { "pt": "Bênção do Anel" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Adjutórium nostrum in nómine Dómini.",
+            "pt": "℣. O nosso auxílio está no Nome do Senhor."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Qui fecit cœlum et terram.",
+            "pt": "℟. Que criou o céu e a terra."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dómine, exáudi oratiónem meam.",
+            "pt": "℣. Senhor, ouvi a minha oração."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et clamor meus ad te véniat.",
+            "pt": "℟. E que meu clamor chegue até Vós."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dóminus vobíscum.",
+            "pt": "℣. O Senhor seja convosco."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et cum spíritu tuo.",
+            "pt": "℟. E com vosso espírito."
+          }
+        },
+        {
+          "type": "prayer",
+          "text": { "la": "℣. Orémus.", "pt": "℣. Oremos." }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Benedic, ✠ Dómine, ánnulum hunc, quem nos in tuo nómine benedícimus, ✠ ut quæ eum gestáverit, fidelitátem íntegram suo sponso tenens, in pace et voluntáte tua permáneat atque in mútua caritáte semper vivat. Per Christum Dóminum nostrum.",
+            "pt": "Abençoai, ✠ Senhor, este anel, que nós benzemos ✠ em vosso Nome, a fim de que aquela que vai usá-lo, guardando a seu esposo uma fidelidade inteira, permaneça na paz e na vossa vontade e viva sempre no amor recíproco. Por Cristo, nosso Senhor."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } },
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "O Sacerdote asperge o anel com Água benta; depois entrega este mesmo anel ao marido, que o põe no dedo anelar da mão esquerda da cônjugue. Ao mesmo tempo o Sacerdote diz, fazendo com a mão o Sinal da Cruz sobre o anel:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Confírma hoc, Deus, quod operátus es in nobis.",
+            "pt": "℣. Confirmai, Senhor, aquilo que acabais de operar em nós."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. A templo sancto tuo, quod est in Jerúsalem.",
+            "pt": "℟. Do vosso templo Santo, que é a celestial Jerusalém."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Kyrie eléison.",
+            "pt": "℣. Senhor, tende piedade de nós."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Christe eléison.",
+            "pt": "℟. Cristo, tende piedade de nós."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Kyrie eléison.",
+            "pt": "℣. Senhor, tende piedade de nós."
+          }
+        },
+        {
+          "type": "rubric",
+          "text": { "la": "Pater noster…", "pt": "Pai nosso… (silêncio)" }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Et ne nos indúcas in tentatiónem.",
+            "pt": "℣. E não nos deixeis cair em tentação."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Sed líbera nos a malo.",
+            "pt": "℟. Mas livrai-nos do mal."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Salvus fac servos tuos.",
+            "pt": "℣. Senhor, salvai os vossos servos."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Deus meus, sperántes in te.",
+            "pt": "℟. Que esperam em Vós, ó Deus."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Mitte eis, Dómine, auxílium de sancto.",
+            "pt": "℣. Do vosso santuário, enviai-lhes, Senhor, auxílio."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et de Sion tuére eos.",
+            "pt": "℟. E de Sião, amparai-os."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Esto eis, Dómine, turris fortitúdinis.",
+            "pt": "℣. Sede para eles como uma torre fortificada."
+          }
+        },
+        {
+          "type": "response",
+          "text": { "la": "℟. A fácie inimíci.", "pt": "℟. Contra o inimigo." }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dómine, exáudi oratiónem meam.",
+            "pt": "℣. Senhor, ouvi a minha oração."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et clamor meus ad te véniat.",
+            "pt": "℟. E que meu clamor chegue até Vós."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dóminus vobíscum.",
+            "pt": "℣. O Senhor seja convosco."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et cum spíritu tuo.",
+            "pt": "℟. E com vosso espírito."
+          }
+        },
+        {
+          "type": "prayer",
+          "text": { "la": "℣. Orémus.", "pt": "℣. Oremos." }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Respice, quǽsumus, Dómine, super hos fámulos tuos et institútis tuis, quibus propagatiónem humáni géneris ordinásti, benígnus assíste, ut qui te auctóre jungúntur, te auxiliánte servéntur. Per Christum Dóminum nostrum.",
+            "pt": "Senhor, Vos suplicamos, olhai misericordioso para estes esposos, que são vossos servos, e, visto que destinastes esta instituição para a propagação do género humano, auxiliai-o benignamente, a fim de que aqueles que se unem em Vós, que sois o seu Criador, sejam sempre protegidos por Vós, que sois também o seu sustentáculo. Por Cristo, nosso Senhor."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "missa-introito",
+      "title": { "pt": "Missa do Matrimónio — Intróito" },
+      "blocks": [
+        { "type": "reference", "text": { "pt": "Tb. 7, 15; 8, 19" } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Deus Israël conjúngat vos: et ipse sit vobíscum, qui misértus est duóbus únicis: et nunc, Dómine, fac eos plénius benedícere te. (T. P. Allelúja, allelúja.) Ps. 127, 1 Beáti omnes, qui timent Dóminum: qui ámbulant in viis ejus. ℣. Gloria Patri…",
+            "pt": "Que Deus de Israel vos una: que Ele permaneça convosco e tenha piedade destes dois filhos únicos. De agora em diante. Senhor, fazei que Vos louvem plenamente. (T. P. Aleluia, aleluia.) Sl. 127, 1 Bem-aventurados aqueles que temem o Senhor: e que seguem os seus caminhos. ℣. Glória ao Pai…"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "missa-oracao",
+      "title": { "pt": "Oração" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Exáudi nos, omnípotens et misericors Deus: ut, quod nostro ministrate officio, tua benedictióne potius impleatur. Per Dóminum…",
+            "pt": "Atendei-nos, ó Deus omnipotente e misericordioso, a fim de que aquilo que iniciámos com o nosso ministério alcance complemento perfeito com vossa bênção. Por nosso Senhor…"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "missa-epistola",
+      "title": { "pt": "Epístola — Ef. 5, 22-33" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Léctio Epístolæ beáti Pauli Apóstoli ad Ephésios.",
+            "pt": "Lição da Ep.ª do B. Ap.º Paulo aos Efésios."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Fratres: Mulíeres viris suis súbditae sint, sicut Dómino; quóniam vir caput est mulíeris, sicut Christus caput est Ecclésiæ: Ipse, salvátor córporis ejus. Sed sicut Ecclésia subjécta est Christo, ita et mulíeres viris suis in ómnibus. Viri, dilígite uxóres vestras, sicut et Christus diléxit Ecclésiam, et seípsum trádidit pro ea, ut illam sanctificáret, mundans lavácro aquæ in verbo vitæ, ut exhibéret ipse sibi gloriósam Ecclésiam, non habéntem máculam, aut rugam, aut áliquid hujúsmodi, sed ut sit sancta et immaculáta. Ita et viri debent dilígere uxóres suas, ut córpora sua. Qui suam uxórem díligit, seípsum díligit. Nemo enim umquam carnem suam ódio hábuit, sed nutrit, et fovet eam, sicut et Christus Ecclésiam: quia membra sumus córporis ejus, de carne ejus et de óssibus ejus. Propter hoc relínquet homo patrem et matrem suam, et adhærébit uxóri suæ: et erunt duo in carne una. Sacraméntum hoc magnum est, ego autem dico in Christo, et in Ecclésia. Verúmtamen et vos sínguli, unusquísque uxórem suam, sicut seípsum díligat: uxor autem tímeat virum suum.",
+            "pt": "Meus irmãos: Que as mulheres estejam sujeitas a seus maridos, como ao Senhor; pois o marido é a cabeça da mulher, como Cristo é a cabeça da Igreja, e o Salvador do seu corpo. Ora, assim como a Igreja está sujeita a Cristo, assim também as mulheres devem estar sujeitas a seus maridos, em todas as coisas. Maridos, amai vossas mulheres, como Cristo amou a sua Igreja e se entregou por ela, para a santificar, purificando-a na água baptismal pela palavra da vida, para a conduzir diante de si, como Igreja gloriosa, sem mácula, nem ruga, nem coisa semelhante; mas santa e imaculada. Assim devem os maridos amar suas mulheres, como os seus corpos. Quem ama sua mulher, ama-se a si mesmo; pois nunca ninguém tem ódio ao seu próprio corpo; mas nutre-o e sustenta-o, como Cristo faz à sua Igreja; pois somos membros do seu corpo, formados da sua carne e dos seus ossos. Por essa razão deixará o homem seu pai e sua mãe, e se unirá a sua mulher; e os dois formarão uma só carne. Grande é este mystério! Digo-o diante de Cristo e da Igreja. Portanto, vós outros, cada um em particular, ame sua mulher, como a si mesmo, e a mulher respeite o seu marido."
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "missa-gradual",
+      "title": { "pt": "Gradual" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Sl. 127, 3 Uxor tua sicut vitis abúndans in latéribus domus tuæ. ℣. Fílii tui sicut novéllæ olivárum in circúitu mensæ tuæ.",
+            "pt": "Sl. 127, 3 A vossa esposa será como uma vinha fecunda no seio da vossa casa: ℣. E os vossos filhos como rebentos de oliveira, em torno da vossa mesa."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Allelúja, allelúja. ℣. Ps. 19, 3 Mittat vobis Dóminus auxílium de sancto: et de Sion tueátur vos. Allelúja.",
+            "pt": "Aleluia, aleluia. ℣. Sl. 19, 3 Que a graça do Senhor desça do seu santuário e de Sião, e vos socorra e proteja. Aleluia."
+          }
+        },
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "Após a Septuagésima, omite-se o Aleluia e o seguinte, e diz-se:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Tractus — Sl. 127, 4-6 Ecce, sic benedicétur omnis homo, qui timet Dóminum. ℣. Benedícat tibi Dóminus ex Sion: et vidéas bona Jerúsalem ómnibus diébus vitae tuæ. ℣. Et vídeas fílios filiórum tuórum: pax super Israël.",
+            "pt": "Trato — Sl. 127, 4-6 Assim será abençoado o homem que teme o Senhor. ℣. O Senhor vos abençoe lá de Sião, e possais gozar a felicidade de Jerusalém todos os dias da vossa vida. ℣. E ver os filhos dos vossos filhos e a paz em Israel."
+          }
+        },
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "No Tempo Pascal omite-se o Gradual e o Trato e diz-se:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Allelúja, allelúja. ℣. Ps. 19, 3 Mittat vobis Dóminus auxílium de sancto: et de Sion tueátur vos. Allelúja. ℣. Ps. 133, 3 Benedícat vobis Dóminus ex Sion: qui fecit cœlum et terram. Allelúja.",
+            "pt": "Aleluia, aleluia. ℣. Sl. 19, 3 Que a graça do Senhor desça do seu santuário e de Sião e vos socorra e proteja. Aleluia. ℣. Sl. 133, 3 Que o Senhor, que criou o céu e a terra, vos abençoe lá de Sião. Aleluia."
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "missa-evangelho",
+      "title": { "pt": "Evangelho — Mt. 19, 3-6" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "✠ Sequéntia sancti Evangélii secúndum Matthǽum.",
+            "pt": "✠ Continuação do santo Evangelho segundo S. Mateus."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "In illo témpore: Accessérunt ad Jesum pharisǽi, tentántes eum et dicéntes: Si licet hómini dimíttere uxórem suam quacúmque ex causa? Qui respóndens, ait eis: Non legístis, quia qui fecit hóminem ab inítio, másculum et féminam fecit eos? et dixit: Propter hoc dimíttet homo patrem et matrem, et adhærébit uxóri suæ, et erunt duo in carne una. Itaque jam non sunt duo, sed una caro. Quod ergo Deus conjúnxit, homo non séparet.",
+            "pt": "Naquele tempo, os fariseus aproximaram-se de Jesus para O tentar, dizendo: «É lícito ao homem repudiar sua mulher por qualquer causa?». Ele respondeu: «Não lestes que Aquele que criou o homem no princípio do mundo, criou um homem e uma mulher e disse: «Por causa disto o homem deixará seu pai e sua mãe e se unirá a sua mulher, e serão dois em uma só carne?». Assim, eles não são já dois, mas uma só carne. Portanto que o homem não separe o que Deus uniu»."
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "missa-ofertorio",
+      "title": { "pt": "Ofertório" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Sl. 30, 15-16 In te sperávi, Dómine: dixi: Tu es Deus meus: in mánibus tuis témpora mea. (T. P. Allelúja.)",
+            "pt": "Sl. 30, 15-16 Em Vós, senhor, pus toda minha confiança. Eu disse: sois o meu Deus: nas vossas mãos está o meu destino. (T. P. Aleluia.)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "missa-secreta",
+      "title": { "pt": "Secreta" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Suscipe, quǽsumus, Dómine, pro sacra conúbii lege munus oblátum: et, cujus largítor es óperis, esto dispósitor. Per Dóminum…",
+            "pt": "Senhor, vos suplicamos, aceitai o sacrifício que Vos oferecemos para consagrar este pacto matrimonial e, visto que fostes o autor dele, sede também o seu guarda. Por nosso Senhor…"
+          }
+        },
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "Após o Pater Noster… e antes do Libera-nos… os cônjuges ajoelham diante do Altar, próximo do Celebrante, enquanto este diz:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "bencao-conjuges",
+      "title": { "pt": "Bênção dos cônjuges" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Propitiáre, Dómine, supplicatiónibus nostris, et institútis tuis, quibus propagatiónem humáni géneris ordinásti, benígnus assíste: ut, quod te auctóre júngitur, te auxiliánte servétur. Per Dóminum nostrum…",
+            "pt": "Sede propício, Senhor, às nossas súplicas e, visto que instituístes este sacramento para a propagação do género humano, assisti-nos benignamente, a fim de que produza a sua graça e se conserve a união de que fostes autor. Por nosso Senhor…"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "oracao-solene",
+      "title": { "pt": "Oração" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Deus, qui potestáte virtútis tuæ de níhilo cuncta fecísti: qui dispósitis universitátis exórdiis, hómini, ad imáginem Dei facto, ídeo inseparábile mulíeris adjutórium condidísti, ut femíneo córpori de viríli dares carne princípium, docens, quod ex uno placuísset instítui, numquam licére disjúngi: Deus, qui tam excellénti mystério conjugálem cópulam consecrásti, ut Christi et Ecclésiæ sacraméntum præsignáres in fǿdere nuptiárum: Deus, per quem múlier júngitur viro, et socíetas principáliter ordináta ea benedictióne donátur, quæ sola nec per originális peccáti pœnam nec per dilúvii est abláta senténtiam: réspice propítius super hanc fámulam tuam, quæ, maritáli jungénda consórtio, tua se éxpetit protectióne muníri: sit in ea jugum dilectiónis et pacis: fidélis et casta nubat in Christo, imitatríxque sanctárum permáneat feminárum: sit amábilis viro suo, ut Rachel: sápiens, ut Rebécca: longǽva et fidélis, ut Sara: nihil in ea ex áctibus suis ille auctor prævaricatiónis usúrpet: nexa fídei mandatísque permáneat: uni thoro juncta, contáctus illícitos fúgiat: múniat infirmitátem suam robóre disciplínæ: sit verecúndia gravis, pudóre venerábilis, doctrínis cœléstibus erudíta: sit fœcunda in sóbole, sit probáta et ínnocens: et ad Beatórum réquiem atque ad cœléstia regna pervéniat: et vídeant ambo fílios filiórum suórum, usque in tártiam et quartam generatiónem, et ad optátam pervéniant senectútem. Per eúndem Dóminum nostrum…",
+            "pt": "Ó Deus, que por vosso poder e virtude formastes o mundo do nada, e, postos em ordem todos estes elementos, criastes o homem à vossa imagem e depois lhe concedestes o dom da mulher, como auxílio inseparável: Vós, ó Deus, que tirastes o corpo da mulher da própria carne do homem, ensinando-nos assim que não é lícito separar aquilo que por vossa Vontade teve um só princípio; ó Deus, que consagrastes a união conjugal com um tão excelente mystério, de tal modo que esta aliança nupcial representa a união de Cristo com a Igreja, ó Deus, por quem a mulher se une ao homem e em cuja aliança está organizada a sociedade, concedei-lhe aquela bênção que foi a única de que não fomos privados, nem pela pena do pecado original, nem pela sentença do dilúvio: olhai propício para esta vossa serva, que, destinada ao consórcio marital, implora socorro da vossa protecção: que ela goze os dons do amor e da paz; que, consorciada em Cristo, seja sempre casta e fiel e imite as santas mulheres: seja amável para com seu marido, como Raquel; prudente, como Rebeca; de longa vida e fiel, como Sara. Que o autor do pecado não tenha poder algum nela, nem nos seus actos; que permaneça na fé e seja exacta na prática dos Mandamentos; que seja fiel ao marido no débito conjugal e fuja de todo o comércio carnal ilícito; que fortaleça a sua fraqueza com o vigor da doutrina: seja grave pela sua modéstia, venerável pelo seu pudor, instruída na doutrina do céu, fecunda na prole, honrada e inocente, e alcance a paz dos bem-aventurados e o gozo do reino celestial: que ambos os cônjuges vejam os filhos de seus filhos até à terceira e à quarta geração e cheguem à velhice que desejam. Por nosso Senhor…"
+          }
+        },
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "Os cônjuges retiram-se para os seus lugares e o Celebrante continua LIBERA NOS…"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "communio",
+      "title": { "pt": "Comúnio" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Sl. 127, 4 & 6 Ecce, sic benedicétur omnis homo, qui timet Dóminum: et vídeas fílios filiórum tuórum: pax super Israël. (T. P. Allelúja.)",
+            "pt": "Sl. 127, 4 e 6 Eis como será abençoado o homem que teme o Senhor: «que goze a felicidade de ver os filhos dos seus filhos e a paz em Israel». (T. P. Aleluia.)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "postcommunio",
+      "title": { "pt": "Postcomúnio" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Quǽsumus, omnípotens Deus: institúta providéntiæ tuæ pio favóre comitáre; ut, quos legítima societáte conéctis, longǽva pace custódias. Per Dóminum…",
+            "pt": "Vos suplicamos, ó Deus omnipotente, acompanhai com os favores da vossa bondade aquilo que pela vossa providência instituístes, a fim de que aqueles, que unistes para um fim legítimo, vivam em longa paz. Por nosso Senhor…"
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "antes-bencao-missa",
+      "blocks": [
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "Antes da Bênção da Missa os cônjuges vão ajoelhar ao pé do Altar, e o Sacerdote diz:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Deus Abraham, Deus Isaac et Deus Jacob sit vobíscum: et ipse adímpleat benedictiónem suam in vobis: ut videátis fílios filiórum vestrórum usque ad tértiam et quartam generatiónem, et póstea vitam ætérnam habeátis sine fine: adjuvánte Dómino nostro Jesu Christo, qui cum Patre et Spíritu Sancto vivit et regnat…",
+            "pt": "Deus de Abraão, Deus de Isaque, Deus de Jacob esteja convosco; e que sua bênção desça sobre vós, para que vejais os filhos de vossos filhos até à terceira e quarta geração, e em seguida alcanceis a vida eterna para sempre pela graça de nosso Senhor Jesus Cristo: Que, com o Pai e o Espírito Santo, sendo Deus, vive…"
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    }
+  ]
+}

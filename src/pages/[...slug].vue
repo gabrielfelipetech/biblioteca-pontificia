@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BPRenderSection from '@/shared/components/organism/BPRenderSection.vue';
-import type { Lang } from '@/shared/types/content';
-import type { Section, Block } from '@/shared/types/content';
+import BPRenderSectionDual from '@/shared/components/organism/BPRenderSectionDual.vue';
+import type { Lang, Section, Block } from '@/shared/types/content';
 import { createError, useAsyncData, useHead, useRoute } from 'nuxt/app';
 import { computed, ref, watch } from 'vue';
 
@@ -30,9 +30,7 @@ watch(
   () => doc.value,
   () => {
     if (doc.value) {
-      useHead({
-        title: doc.value.meta?.title?.pt ?? doc.value.slug,
-      });
+      useHead({ title: doc.value.meta?.title?.pt ?? doc.value.slug });
     }
   },
   { immediate: true }
@@ -75,16 +73,15 @@ const alt = ref<Lang>('pt');
 watch(
   () => doc.value,
   () => {
-    const cl = completeLangs.value;
     const al = anyLangs.value;
-    lang.value = (cl[0] ?? al[0] ?? 'pt') as Lang;
-    alt.value = (cl[1] ?? cl[0] ?? lang.value) as Lang;
+    lang.value = (al[0] ?? 'pt') as Lang;
+    alt.value = (al.find((l) => l !== lang.value) ?? lang.value) as Lang;
   },
   { immediate: true }
 );
 
 const showDual = computed(
-  () => completeLangs.value.length >= 2 && lang.value !== alt.value
+  () => anyLangs.value.length >= 2 && lang.value !== alt.value
 );
 </script>
 
@@ -122,33 +119,9 @@ const showDual = computed(
       </article>
 
       <div v-if="showDual" class="hidden md:grid grid-cols-2 gap-8">
-        <article class="prose dark:prose-invert">
-          <BPRenderSection
-            v-for="s in doc.content"
-            :key="s.key"
-            :section="s"
-            :lang="lang"
-            fallback="pt"
-          />
-        </article>
-
-        <article class="prose dark:prose-invert">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="font-semibold">Coluna B:</span>
-            <select v-model="alt" class="border p-1 rounded">
-              <option v-for="l in completeLangs" :key="l" :value="l">
-                {{ l.toUpperCase() }}
-              </option>
-            </select>
-          </div>
-          <BPRenderSection
-            v-for="s in doc.content"
-            :key="s.key"
-            :section="s"
-            :lang="alt"
-            fallback="pt"
-          />
-        </article>
+        <template v-for="s in doc.content" :key="s.key">
+          <BPRenderSectionDual :section="s" :l1="lang" :l2="alt" />
+        </template>
       </div>
 
       <article v-else class="hidden md:block prose dark:prose-invert">

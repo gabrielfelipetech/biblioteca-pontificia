@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "1.0",
+  "id": "extrema-unctio",
+  "type": "ritual",
+  "slug": "extrema-uncao",
+  "langs": ["pt", "la"],
+  "meta": {
+    "title": { "pt": "Extrema-unção", "la": "Extrema Unctio" },
+    "subtitle": { "pt": "Ritual segundo o uso tradicional" },
+    "tags": ["sacramentos", "extrema-unção"]
+  },
+  "content": [
+    {
+      "type": "section",
+      "key": "preparacao",
+      "title": { "pt": "No quarto do enfermo" },
+      "blocks": [
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "Preparar-se-á uma mesa coberta com uma toalha branca e sobre esta um Crucifixo, duas velas, Água benta, um prato com oito pequenos bocados de algodão para limpar o Óleo das unções, um pouco de miolo de pão, uma bacia com água e uma toalha. O Sacerdote, entrando em casa do enfermo, dirá:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Pax huic dómui.",
+            "pt": "℣. A paz esteja nesta casa."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et ómnibus habitántibus in ea.",
+            "pt": "℟. E em todos seus habitantes."
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "asperges",
+      "title": { "pt": "Asperges Me", "la": "Asperges Me" },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Asperges me, Dómine, hyssópo et mundabor: lávabis me, et super nivem dealbábor.",
+            "pt": "Aspergir-me-eis, Senhor, com o hissope e ficarei puro; lavar-me-eis e ficarei alvo, como a neve."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Osténde nobis, Dómine, misericórdiam tuam.",
+            "pt": "℣. Mostrai, Senhor, a vossa misericórdia."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et salutáre tuum da nobis.",
+            "pt": "℟. E dai-nos a salvação."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dómine, exáudi oratiónem meam.",
+            "pt": "℣. Ouvi, Senhor, a minha oração."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et clamor meus ad te véniat.",
+            "pt": "℟. E que meu clamor chegue até Vós."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dóminus vobíscum.",
+            "pt": "℣. O Senhor seja convosco."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et cum spíritu tuo.",
+            "pt": "℟. E com vosso espírito."
+          }
+        },
+        { "type": "prayer", "text": { "la": "Orémus.", "pt": "Oremos." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Exáudi nos, Dómine sancte, Pater omnípotens, ætérne Deus, et míttere dignéris Sanctum Angelum tuum de cælis, qui custódiat, fóveat, prótegat, vísitet atque deféndat omnes habitantes in hoc habitáculo. Per Christum Dóminum nostrum. Amen.",
+            "pt": "Ouvi-nos, Senhor santo, Pai omnipotente, Deus eterno, e dignai-Vos enviar do céu o vosso Santo Anjo, para que ele guarde, conserve, proteja, visite e defenda todos aqueles que se encontram neste templo. Por Cristo, nosso Senhor. Amen."
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "saudacoes-1",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Adjutórium nostrum in nómine Dómini.",
+            "pt": "℣. O nosso auxílio está no Nome do Senhor."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Qui fecit cœlum et terram.",
+            "pt": "℟. Que criou o céu e a terra."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dómine, exáudi oratiónem meam.",
+            "pt": "℣. Senhor, ouvi a minha oração."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et clamor meus ad te véniat.",
+            "pt": "℟. E que meu clamor chegue até Vós."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dóminus vobíscum.",
+            "pt": "℣. O Senhor seja convosco."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et cum spíritu tuo.",
+            "pt": "℟. E com vosso espírito."
+          }
+        },
+        { "type": "prayer", "text": { "la": "Orémus.", "pt": "Oremos." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Intróeat, Dómine Jesu Christe, domum hanc sub nostræ humilitátis ingréssu, ætérna felícitas, divína prospéritas, seréna lætítia, cáritas fructuósa, sánitas sempitérna: effúgiat ex hoc loco accéssus dæmonum: adsint Angeli pacis, domúmque hanc déserat omnis malígna discórdia. Magnífica, Dómine, super nos nomen sanctum tuum; et béne ✠ dic nostræ conversatióni: sanctífica nostræ humilitátis ingréssum, qui sanctus et pius es, et pérmanes cum Patre et Spíritu Sancto in sæcula sæculórum.",
+            "pt": "Senhor Jesus Cristo, fazei entrar nesta casa, conduzido pelos passos do vosso humilde ministro, a felicidade eterna, a prosperidade divina, a alegria pura, a caridade fecunda e a saúde inalterável; fazei que os demónios fujam desta casa, não ousando mais entrar nela; fazei que os Anjos da paz aqui acorram e que toda a maligna discórdia seja expulsa. Fazei brilhar, Senhor, a grandeza do vosso Sacratíssimo Nome e abençoai ✠ o nosso ministério. Santificai a nossa humilde entrada neste lugar santo, Vós que sois a própria santidade e misericórdia e que permaneceis com o Pai e o Espírito Santo em todos os séculos dos séculos."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "benedictio-domus",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Orémus, et deprecémur Dóminum nostrum Jesum Christum, ut benedicéndo bene ✠ dicat hoc tabernáculum, et omnes habitántes in eo, et det eis Angelum bonum custódem, et fáciat eos sibi servíre ad considerándum mirabília de lege sua: avértat ab eis omnes contrárias potestátes: erípiat eos ab omni formídine, et ab omni perturbatióne, ac sanos in hoc tabernáculo custodíre dignétur: Qui cum Patre et Spíritu Sancto vivit et regnat Deus in sæcula sæculórum.",
+            "pt": "Pedimos e imploramos de nosso Senhor Jesus Cristo, que encha com suas bênçãos ✠ esta casa e todos aqueles que nela habitam; que lhes envie o seu Anjo para os guardar cuidadosamente; que os una ao seu serviço e os faça considerar nas maravilhas da sua Lei; que afaste deles todas as forças inimigas; que os livre de qualquer perturbação ou terror e que se digne conservá-los sãos e salvos nesta morada: Ele, que, sendo Deus, vive e reina pelos séculos dos séculos."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } },
+        { "type": "prayer", "text": { "la": "Orémus.", "pt": "Oremos." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Exáudi nos, Dómine sancte, Pater omnípotens, ætérne Deus: et míttere dignéris sanctum Angelum tuum de cælis, qui custódiat, fóveat, prótegat, vísitet, atque deféndat omnes habitántes in hoc habitáculo. Per Christum Dóminum nostrum.",
+            "pt": "Ouvi-nos, Senhor santo, Pai omnipotente, Deus eterno, e dignai-Vos mandar do céu o vosso Santo Anjo, para que guarde, sustente, proteja, visite e defenda todos aqueles que se encontram nesta morada. Por Cristo Senhor nosso."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "absolucoes",
+      "blocks": [
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "O Acólito diz o «Confiteor Deo…» e o Sacerdote, tendo dado as Absolvições, continua:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "In nómine Pa ✠ tris, et Fí ✠ lii, et Spíritus ✠ Sancti, extinguátur in te omnis virtus diáboli per impositiónem mánuum nostrárum, et per invocatiónem gloriósæ et sanctæ Dei Genitrícis Maríæ, ejúsque ínclyti Sponsi Joseph, et ómnium sanctórum Angelórum, Archangelórum, Mártyrum, Confessórum, Vírginum, atque ómnium simul Sanctórum.",
+            "pt": "Em Nome do Pai ✠ e do Filho ✠ e do Espírito ✠ Santo, pela imposição das nossas mãos e pela invocação de todos os santos Anjos, Arcanjos, Patriarcas, Profetas, Apóstolos, Mártires, Confessores, Virgens e Todos os Santos em geral desapareça todo e qualquer poder do demónio sobre vós!"
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "uncoes",
+      "title": { "pt": "Sagradas Unções", "la": "Unctiones Sacræ" },
+      "blocks": [
+        {
+          "type": "section",
+          "title": { "pt": "Dos Olhos", "la": "De Oculis" },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "la": "Per istam sanctam Unctió ✠ nem, et suam piíssimam misericórdiam, indúlgeat tibi Dóminus quidquid per visum deliquísti.",
+                "pt": "Em virtude desta santa Unção ✠, que o Senhor, pela sua piíssima misericórdia, vos perdoe todas as faltas que cometestes com a vista."
+              }
+            },
+            {
+              "type": "response",
+              "text": { "la": "℟. Amen.", "pt": "℟. Amen." }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": { "pt": "Dos Ouvidos", "la": "De Auribus" },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "la": "Per istam sanctam Unctió ✠ nem, et suam piíssimam misericórdiam, indúlgeat tibi Dóminus quidquid per audítum deliquísti.",
+                "pt": "Em virtude desta santa Unção ✠, que o Senhor, pela sua piíssima misericórdia, vos perdoe todas as faltas que cometestes com os ouvidos."
+              }
+            },
+            {
+              "type": "response",
+              "text": { "la": "℟. Amen.", "pt": "℟. Amen." }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": { "pt": "Do Nariz", "la": "De Naso" },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "la": "Per istam sanctam Unctió ✠ nem, et suam piíssimam misericórdiam, indúlgeat tibi Dóminus quidquid per odorátum deliquísti.",
+                "pt": "Em virtude desta santa Unção ✠, que o Senhor, pela sua piíssima misericórdia, vos perdoe todas as faltas que cometestes com o cheiro."
+              }
+            },
+            {
+              "type": "response",
+              "text": { "la": "℟. Amen.", "pt": "℟. Amen." }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": { "pt": "Da Boca", "la": "De Ore" },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "la": "Per istam sanctam Unctió ✠ nem, et suam piíssimam misericórdiam, indúlgeat tibi Dóminus quidquid per gustum et locutiónem deliquísti.",
+                "pt": "Em virtude desta santa Unção ✠, que o Senhor, pela sua piíssima misericórdia, vos perdoe todas as faltas que cometestes com o gosto e as palavras."
+              }
+            },
+            {
+              "type": "response",
+              "text": { "la": "℟. Amen.", "pt": "℟. Amen." }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": { "pt": "Das Mãos", "la": "De Manibus" },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "la": "Per istam sanctam Unctió ✠ nem, et suam piíssimam misericórdiam, indúlgeat tibi Dóminus quidquid per tactum deliquísti.",
+                "pt": "Em virtude desta santa Unção ✠, que o Senhor, pela sua piíssima misericórdia, vos perdoe todas as faltas que cometestes com o tacto."
+              }
+            },
+            {
+              "type": "response",
+              "text": { "la": "℟. Amen.", "pt": "℟. Amen." }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": { "pt": "Dos Pés", "la": "De Pedibus" },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "la": "Per istam sanctam Unctió ✠ nem, et suam piíssimam misericórdiam, indúlgeat tibi Dóminus quidquid per gressum deliquísti.",
+                "pt": "Em virtude desta santa Unção ✠, que o Senhor, pela sua piíssima misericórdia, vos perdoe todas as faltas que cometestes com os passos."
+              }
+            },
+            {
+              "type": "response",
+              "text": { "la": "℟. Amen.", "pt": "℟. Amen." }
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "text": {
+            "pt": "Se o enfermo se encontra em necessidade extrema, o Sacerdote, fazendo uma só unção, dirá:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "pt": "Em virtude desta Unção, que o Senhor vos perdoe todas as faltas que cometestes. Amen."
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "post-uncoes-lit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Kýrie eléison.",
+            "pt": "℣. Senhor, tende piedade."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Christe, eléison.",
+            "pt": "℟. Cristo, tende piedade."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Kýrie eléison.",
+            "pt": "℣. Senhor, tende piedade."
+          }
+        },
+        {
+          "type": "rubric",
+          "text": {
+            "la": "Pater noster secreto…",
+            "pt": "Pai-Nosso em silêncio até:"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Et ne nos indúcas in tentatiónem.",
+            "pt": "℣. E não nos deixeis cair em tentação."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Sed líbera nos a malo.",
+            "pt": "℟. Mas livrai-nos do mal."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Salvum (-am) fac servum tuum (ancíllam tuam).",
+            "pt": "℣. Salvai o vosso servo."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Deus meus, sperántem in te.",
+            "pt": "℟. Que em Vós espera."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Mitte ei, Dómine, auxílium de sancto.",
+            "pt": "℣. Enviai-lhe, Senhor, do vosso santuário o vosso auxílio."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et de Sion tuére eum (eam).",
+            "pt": "℟. E protejei-o lá de Sião."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Esto ei, Dómine, turris fortitúdinis.",
+            "pt": "℣. Sede, Senhor, a sua fortaleza."
+          }
+        },
+        {
+          "type": "response",
+          "text": { "la": "℟. A fácie inimíci.", "pt": "℟. Contra o inimigo." }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Nihil profíciat inimícus in eo (ea).",
+            "pt": "℣. Que o inimigo não tenha poder algum nele."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et fílius iniquitátis non appónat nocére ei.",
+            "pt": "℟. E que o Filho da iniquidade não possa prejudicá-lo."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dómine, exáudi oratiónem meam.",
+            "pt": "℣. Senhor, ouvi a minha oração."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et clamor meus ad te véniat.",
+            "pt": "℟. E que meu clamor chegue até Vós."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "℣. Dóminus vobíscum.",
+            "pt": "℣. O Senhor seja convosco."
+          }
+        },
+        {
+          "type": "response",
+          "text": {
+            "la": "℟. Et cum spíritu tuo.",
+            "pt": "℟. E com vosso espírito."
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "oratio-iacobi",
+      "blocks": [
+        { "type": "prayer", "text": { "la": "Orémus.", "pt": "Oremos." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Dómine Deus, qui per Apóstolum tuum Jacóbum locútus es: «Infirmátur quis in vobis? indúcat presbýteros Ecclésiæ, et orent super eum, ungéntes eum óleo in nómine Dómini: et orátio fídei salvábit infírmum, et alleviábit eum Dóminus: et si in peccátis sit, remitténtur ei»; cura, quæsumus, Redémptor noster, grátia Sancti Spíritus languóres istíus infírmi (infírmæ), ejúsque sana vúlnera, et dimítte peccáta, atque dolóres cunctos mentis et córporis ab eo (ea) expélle, plenámque intérius et extérius sanitátem misericórditer redde, ut, ope misericórdiæ tuæ restitútus (-a), ad prístina reparétur offícia: Qui cum Patre et eódem Spíritu Sancto vivis et regnas Deus, in sæcula sæculórum.",
+            "pt": "Senhor Deus, que pela boca do Apóstolo Tiago dissestes: «Se algum de vós estiver doente, faça vir os Presbíteros da Igreja, para que orem por ele e o unjam com o Santo Óleo; a oração feita com fé salvará o enfermo, e o Senhor o aliviará; e se tiver pecados alcançará a remissão deles»; curai, Vos suplicamos, pela graça do Espírito Santo, as enfermidades deste doente; curai-lhe as feridas e perdoai-lhe os pecados; afastai dele todas as dores da alma e do corpo e restitui-lhe, por vossa misericórdia, plena saúde interior e exterior, para que, restabelecido pela vossa bondade, possa retomar o cumprimento dos seus deveres. Vós que viveis e reinais com o Pai e o mesmo Espírito Santo pelos séculos dos séculos."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "respice-famulum",
+      "blocks": [
+        { "type": "prayer", "text": { "la": "Orémus.", "pt": "Oremos." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Réspice, quæsumus, Dómine, fámulum tuum N. (fámulam tuam N.) in infirmitáte sui córporis fatiscéntem, et ánimam réfove, quam creásti: ut, castigatiónibus emendátus (-a), se tua séntiat medicína salvátum (-am). Per Christum Dóminum nostrum.",
+            "pt": "Vos suplicamos, Senhor, olhai benigno para o vosso servo N., que sucumbe sob a enfermidade do seu corpo, e reanimai esta alma que criastes, a fim de que, curado dos castigos que sofreu, reconheça que deve a salvação aos remédios da vossa graça. Por nosso Senhor…"
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    },
+    {
+      "type": "section",
+      "key": "domine-sancte",
+      "blocks": [
+        { "type": "prayer", "text": { "la": "Orémus.", "pt": "Oremos." } },
+        {
+          "type": "paragraph",
+          "text": {
+            "la": "Dómine sancte, Pater omnípotens, ætérne Deus, qui, benedictiónis tuæ grátiam ægris infundéndo corpóribus, factúram tuam multíplici pietáte custódis: ad invocatiónem tui nóminis benígnus assíste; ut fámulum tuum (fámulam tuam) ab ægritúdine liberátum (-am), et sanitáte donátum (-am), déxtera tua érigas, virtúte confírmes, potestáte tueáris, atque Ecclésiæ tuæ sanctæ, cum omni desideráta prosperitáte, restítuas. Per Christum Dóminum nostrum.",
+            "pt": "Senhor santo, Pai omnipotente, Deus eterno, que infundis nos corpos dos enfermos a graça das vossas bênçãos e que rodeais as criaturas com os incessantes cuidados da vossa bondade, atendei benigno à invocação do vosso santo Nome; e, depois de haverdes curado da doença e restituído a saúde ao vosso servo, erguei-o com vossa dextra, fortalecei-o com vossa robustez, protegei-o com vosso poder e restituí-o à Santa Igreja, havendo atendido a todos seus desejos."
+          }
+        },
+        { "type": "response", "text": { "la": "℟. Amen.", "pt": "℟. Amen." } }
+      ]
+    }
+  ]
+}

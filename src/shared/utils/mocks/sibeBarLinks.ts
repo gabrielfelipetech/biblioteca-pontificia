@@ -119,4 +119,17 @@ export const sidebarLinks: SidebarLink[] = [
       },
     ],
   },
+  {
+    title: 'Ritual',
+    isExpandable: true,
+    icon: 'cross-bolnisi',
+    isExpanded: false,
+    children: [
+      { title: 'Batismo', isRequestable: true, slug: 'batismo' },
+      { title: 'Confirmação', isRequestable: true, slug: 'confirmacao' },
+      { title: 'Matrimônio', isRequestable: true, slug: 'matrimonio' },
+      { title: 'Viático', isRequestable: true, slug: 'viatico' },
+      { title: 'Extrema Unção', isRequestable: true, slug: 'extrema-uncao' },
+    ],
+  },
 ];

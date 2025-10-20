@@ -1,11 +1,21 @@
 <template>
   <header class="header-container">
-    <h1
-      class="tablet:text-2xl tablet:font-semibold mobile-m:text-xl mobile-m:font-bold cursor-pointer"
-      @click="goToHome()"
-    >
-      Biblioteca Pontificia
-    </h1>
+    <div class="flex items-center" @click="goToHome()">
+      <div class="w-12 h-12 mr-2 rounded-full overflow-hidden cursor-pointer">
+        <img
+          src="../../../assets/images/logo/logoBP.png"
+          alt="Biblioteca Pontificia Logo"
+          class="w-full h-full object-cover scale-[1.65]"
+        />
+      </div>
+
+      <h1
+        class="tablet:text-2xl tablet:font-semibold mobile-m:text-xl mobile-m:font-bold cursor-pointer"
+      >
+        Biblioteca Pontificia
+      </h1>
+    </div>
+
     <Input
       v-model="searchInput"
       icon-name="mdi:magnify"

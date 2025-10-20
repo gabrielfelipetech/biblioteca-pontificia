@@ -29,7 +29,7 @@
                 </h2>
               </div>
               <Icon
-                v-if="link.isExpandable"
+                v-if="link.isExpandable && isSideBarOpen"
                 class="chevron-icon"
                 :class="{ 'chevron-rotated': link.isExpanded }"
                 :name="'mdi:chevron-right'"
@@ -140,6 +140,9 @@ const toggleStateSideBar = () => {
 };
 
 function toggleExpand(link: SidebarLink) {
+  if (isSideBarOpen.value === false) {
+    isSideBarOpen.value = true;
+  }
   if (link.isExpandable) link.isExpanded = !link.isExpanded;
 }
 
@@ -170,6 +173,7 @@ async function tryNavigate(link: SidebarLink) {
 .sidebar {
   @apply mt-16 top-16 tablet:top-14 bottom-0 dark:bg-bp-blue-800-light dark:border-bp-blue-800-light border-r py-4 px-2 min-w-8 border-bp-yellow-700-light bg-bp-yellow-100-light overflow-y-auto select-none;
   @apply transition duration-500 ease-in-out;
+  height: 100vh;
   transition-property: width;
   .sidebar-container {
     .sidebar-list {

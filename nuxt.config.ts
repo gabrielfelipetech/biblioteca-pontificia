@@ -12,6 +12,16 @@ export default defineNuxtConfig({
       title: 'Biblioteca Pontificia',
     },
   },
+  nitro: {
+    routeRules: {
+      '/texts/**': {
+        headers: {
+          'cache-control':
+            'public, max-age=86400, stale-while-revalidate=86400',
+        },
+      },
+    },
+  },
   modules: [
     '@nuxt/devtools',
     '@nuxt/test-utils',
