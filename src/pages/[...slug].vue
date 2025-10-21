@@ -4,6 +4,7 @@ import BPRenderSectionDual from '@/shared/components/organism/BPRenderSectionDua
 import type { Lang, Section, Block } from '@/shared/types/content';
 import { createError, useAsyncData, useHead, useRoute } from 'nuxt/app';
 import { computed, ref, watch } from 'vue';
+import { usePortableDoc } from '~/shared/composables/usePortableDoc';
 
 const route = useRoute();
 const segments = computed(() => {
@@ -23,15 +24,14 @@ const {
   { watch: [last] }
 );
 
-if (status.value === 'error')
+if (error.value)
   throw createError({ statusCode: 404, statusMessage: 'Não encontrado' });
 
 watch(
   () => doc.value,
   () => {
-    if (doc.value) {
+    if (doc.value)
       useHead({ title: doc.value.meta?.title?.pt ?? doc.value.slug });
-    }
   },
   { immediate: true }
 );
@@ -59,32 +59,36 @@ const docHasAny = (l: Lang) =>
       (s as Section).blocks.some((b) => hasText(b as Block, l))
   );
 
-const completeLangs = computed<Lang[]>(() =>
-  doc.value ? (doc.value.langs as Lang[]).filter((l) => docComplete(l)) : []
+const langs = computed<Lang[]>(() => (doc.value?.langs as Lang[]) ?? []);
+const hasLatin = computed(() => langs.value.includes('la'));
+const livingLangs = computed<Lang[]>(() =>
+  langs.value.filter((l) => l !== 'la')
 );
 
-const anyLangs = computed<Lang[]>(() =>
-  doc.value ? (doc.value.langs as Lang[]).filter((l) => docHasAny(l)) : []
-);
-
-const lang = ref<Lang>('pt');
+const lang = ref<Lang>('la');
 const alt = ref<Lang>('pt');
 
 watch(
   () => doc.value,
   () => {
-    const al = anyLangs.value;
-    lang.value = (al[0] ?? 'pt') as Lang;
-    alt.value = (al.find((l) => l !== lang.value) ?? lang.value) as Lang;
+    lang.value = hasLatin.value ? 'la' : (langs.value[0] ?? 'pt');
+    alt.value = (
+      livingLangs.value.includes('pt')
+        ? 'pt'
+        : (livingLangs.value[0] ?? lang.value)
+    ) as Lang;
   },
   { immediate: true }
 );
 
 const showDual = computed(
-  () => anyLangs.value.length >= 2 && lang.value !== alt.value
+  () => hasLatin.value && livingLangs.value.length >= 1 && alt.value !== 'la'
+);
+
+const anyLangs = computed<Lang[]>(() =>
+  doc.value ? (doc.value.langs as Lang[]).filter((l) => docHasAny(l)) : []
 );
 </script>
-
 <template>
   <main class="max-w-6xl mx-auto p-4">
     <div v-if="pending">Carregando…</div>
@@ -100,27 +104,19 @@ const showDual = computed(
         </p>
       </header>
 
-      <div class="md:hidden mb-4">
-        <select v-model="lang" class="border p-2 rounded">
-          <option v-for="l in anyLangs" :key="l" :value="l">
-            {{ l.toUpperCase() }}
-          </option>
-        </select>
-      </div>
-
       <article class="md:hidden prose dark:prose-invert">
         <BPRenderSection
           v-for="s in doc.content"
           :key="s.key"
           :section="s"
-          :lang="lang"
+          :lang="showDual ? 'la' : alt || 'pt'"
           fallback="pt"
         />
       </article>
 
       <div v-if="showDual" class="hidden md:grid grid-cols-2 gap-8">
         <template v-for="s in doc.content" :key="s.key">
-          <BPRenderSectionDual :section="s" :l1="lang" :l2="alt" />
+          <BPRenderSectionDual :section="s" l1="la" :l2="alt" />
         </template>
       </div>
 
@@ -129,7 +125,7 @@ const showDual = computed(
           v-for="s in doc.content"
           :key="s.key"
           :section="s"
-          :lang="lang"
+          :lang="alt"
           fallback="pt"
         />
       </article>

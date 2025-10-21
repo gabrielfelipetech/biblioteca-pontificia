@@ -4,8 +4,12 @@ import type { Section, Block, Lang } from '../../types/content';
 
 const props = defineProps<{ section: Section; l1: Lang; l2: Lang }>();
 
+const kidsOf = (b: Block) => (b as any).children ?? (b as any).blocks ?? [];
+
 const hasText = (b: Block, l: Lang): boolean =>
-  !!b.text?.[l] || (b.children?.some((c) => hasText(c as Block, l)) ?? false);
+  !!b.text?.[l] ||
+  !!(b as any).title?.[l] ||
+  kidsOf(b).some((c: Block) => hasText(c, l));
 
 const sameText = (b: Block, a: Lang, bLang: Lang) =>
   (b.text?.[a] ?? null) !== null && b.text?.[a] === b.text?.[bLang];
@@ -27,7 +31,6 @@ const sameText = (b: Block, a: Lang, bLang: Lang) =>
       >
         <BPRenderBlock :block="b" :lang="hasText(b, l1) ? l1 : l2" />
       </div>
-
       <template v-else>
         <div><BPRenderBlock :block="b" :lang="l1" /></div>
         <div><BPRenderBlock :block="b" :lang="l2" /></div>

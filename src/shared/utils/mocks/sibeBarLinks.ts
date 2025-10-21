@@ -15,6 +15,12 @@ export type SidebarLink =
 
 export const sidebarLinks: SidebarLink[] = [
   {
+    title: 'Calendário',
+    icon: 'calendar-multiselect-outline',
+    isExpanded: false,
+    isRequestable: true,
+  },
+  {
     title: 'Devocionário',
     isExpandable: true,
     icon: 'book-open-blank-variant-outline',
