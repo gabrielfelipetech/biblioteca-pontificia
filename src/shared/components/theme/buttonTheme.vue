@@ -17,6 +17,6 @@ const { isDark, toggleDarkMode } = useDarkMode();
 
 <style lang="scss" scoped>
 .button-theme {
-  @apply flex justify-center gap-4 items-center;
+  @apply flex justify-center gap-4 items-center w-full;
 }
 </style>
