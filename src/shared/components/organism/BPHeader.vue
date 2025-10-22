@@ -1,5 +1,7 @@
 <template>
-  <header class="header-container">
+  <header
+    class="hidden md:flex dark:bg-bp-blue-800-light bg-bp-yellow-100-light dark:border-bp-blue-900-light border-bp-yellow-700-light border-b py-2 px-6 justify-between items-center fixed top-0 inset-x-0 z-30 h-16"
+  >
     <div class="flex items-center" @click="goToHome()">
       <div class="w-12 h-12 mr-2 rounded-full overflow-hidden cursor-pointer">
         <img
@@ -10,7 +12,7 @@
       </div>
 
       <h1
-        class="tablet:text-2xl tablet:font-semibold mobile-m:text-xl mobile-m:font-bold cursor-pointer"
+        class="tablet:text-2xl tablet:font-semibold mobile-b:text-xl mobile-b:font-bold cursor-pointer mobile-b:hidden"
       >
         Biblioteca Pontificia
       </h1>

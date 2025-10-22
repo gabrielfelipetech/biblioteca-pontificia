@@ -4,6 +4,7 @@ export type BaseSidebarLink = {
   isRequestable?: boolean;
   isExpanded?: boolean;
   icon?: string;
+  section?: string;
 };
 
 export type SidebarLink =
@@ -19,14 +20,21 @@ export const sidebarLinks: SidebarLink[] = [
     icon: 'calendar-multiselect-outline',
     isExpanded: false,
     isRequestable: true,
+    section: 'calendario',
   },
+
   {
     title: 'Devocionário',
     isExpandable: true,
     icon: 'book-open-blank-variant-outline',
     isExpanded: false,
     children: [
-      { title: 'Via Sacra', isRequestable: true, slug: 'via-sacra' },
+      {
+        title: 'Via Sacra',
+        isRequestable: true,
+        slug: 'via-sacra',
+        section: 'devocionario',
+      },
       {
         title: 'Orações Diárias',
         isExpandable: true,
@@ -36,26 +44,31 @@ export const sidebarLinks: SidebarLink[] = [
             title: 'Oração da manhã (Breve)',
             isRequestable: true,
             slug: 'oracao-da-manha-breve',
+            section: 'devocionario',
           },
           {
             title: 'Oração da manhã (Completa)',
             isRequestable: true,
             slug: 'oracao-da-manha-completa',
+            section: 'devocionario',
           },
           {
             title: 'Oração da noite (Breve)',
             isRequestable: true,
             slug: 'oracao-da-noite-breve',
+            section: 'devocionario',
           },
           {
             title: 'Oração da noite (Completa)',
             isRequestable: true,
             slug: 'oracao-da-noite-completa',
+            section: 'devocionario',
           },
         ],
       },
     ],
   },
+
   {
     title: 'Cânticos',
     isExpandable: true,
@@ -66,9 +79,11 @@ export const sidebarLinks: SidebarLink[] = [
         title: 'Adóro te devóte',
         isRequestable: true,
         slug: 'adoro-te-devote',
+        section: 'canticos',
       },
     ],
   },
+
   {
     title: 'Documentos Papais',
     isExpandable: true,
@@ -84,6 +99,7 @@ export const sidebarLinks: SidebarLink[] = [
             title: 'Mediator Dei',
             isRequestable: true,
             slug: 'mediator-dei',
+            section: 'documentos-papais/papa-pio-xii',
           },
         ],
       },
@@ -96,6 +112,7 @@ export const sidebarLinks: SidebarLink[] = [
             title: 'Mediator Dei',
             isRequestable: true,
             slug: 'mediator-dei',
+            section: 'documentos-papais/papa-pio-xi',
           },
         ],
       },
@@ -108,6 +125,7 @@ export const sidebarLinks: SidebarLink[] = [
             title: 'Mediator Dei',
             isRequestable: true,
             slug: 'mediator-dei',
+            section: 'documentos-papais/papa-bento-xv',
           },
         ],
       },
@@ -119,23 +137,50 @@ export const sidebarLinks: SidebarLink[] = [
           {
             title: 'Pascendi',
             isRequestable: true,
-            slug: 'mediator-dei',
+            slug: 'pascendi',
+            section: 'documentos-papais/papa-sao-pio-x',
           },
         ],
       },
     ],
   },
+
   {
     title: 'Ritual',
     isExpandable: true,
     icon: 'cross-bolnisi',
     isExpanded: false,
     children: [
-      { title: 'Batismo', isRequestable: true, slug: 'batismo' },
-      { title: 'Confirmação', isRequestable: true, slug: 'confirmacao' },
-      { title: 'Matrimônio', isRequestable: true, slug: 'matrimonio' },
-      { title: 'Viático', isRequestable: true, slug: 'viatico' },
-      { title: 'Extrema Unção', isRequestable: true, slug: 'extrema-uncao' },
+      {
+        title: 'Batismo',
+        isRequestable: true,
+        slug: 'batismo',
+        section: 'ritual',
+      },
+      {
+        title: 'Confirmação',
+        isRequestable: true,
+        slug: 'confirmacao',
+        section: 'ritual',
+      },
+      {
+        title: 'Matrimônio',
+        isRequestable: true,
+        slug: 'matrimonio',
+        section: 'ritual',
+      },
+      {
+        title: 'Viático',
+        isRequestable: true,
+        slug: 'viatico',
+        section: 'ritual',
+      },
+      {
+        title: 'Extrema Unção',
+        isRequestable: true,
+        slug: 'extrema-uncao',
+        section: 'ritual',
+      },
     ],
   },
 ];

@@ -1,29 +1,65 @@
 <template>
-  <aside
-    class="fixed left-0 top-16 tablet:top-14 z-10 dark:bg-bp-blue-800-light bg-bp-yellow-100-light dark:border-bp-blue-800-light border-bp-yellow-700-light border-r h-[calc(100vh-4rem)] tablet:h-[calc(100vh-3.5rem)] transition-[width] duration-300 ease-in-out select-none"
-    :class="isOpen ? 'w-96 tablet:w-80' : 'w-16'"
-  >
-    <nav class="h-full flex flex-col">
-      <button
-        class="sidebar-toggle rounded-lg cursor-pointer ml-2 py-0.5 pt-2 pl-2 hover:dark:bg-bp-blue-700-light hover:bg-bp-yellow-200-light items-start"
-        @click="toggle()"
-      >
-        <Icon :name="isOpen ? 'mdi:backburger' : 'mdi:menu'" size="1.5rem" />
+  <div class="md:hidden">
+    <div
+      class="fixed top-0 inset-x-0 z-30 h-12 px-4 flex items-center gap-3 border-b dark:bg-bp-blue-800-light bg-bp-yellow-100-light"
+    >
+      <button @click="overlay = true" aria-label="Abrir menu" class="w-6 h-6">
+        <Icon name="mdi:menu" size="1.5rem" />
       </button>
+      <span class="font-semibold">Biblioteca Pontificia</span>
+      <div class="ml-auto"></div>
+    </div>
 
-      <div class="grow min-h-0 overflow-y-auto pr-2">
-        <ul class="sidebar-list mt-3 ml-2 space-y-1">
+    <transition name="fade">
+      <aside
+        v-if="overlay"
+        class="fixed inset-0 z-40 overflow-y-auto dark:bg-bp-blue-800-light bg-bp-yellow-100-light"
+      >
+        <div class="h-12 px-4 border-b flex items-center justify-between">
+          <span class="font-semibold">Menu</span>
+          <button @click="overlay = false" aria-label="Fechar">
+            <Icon name="mdi:close" size="1.5rem" />
+          </button>
+        </div>
+
+        <ul class="p-3 space-y-1">
           <BPSidebarNode
             v-for="n in nodes"
             :key="n.id || n.title"
             :node="n"
-            :open="isOpen"
+            :open="true"
             @toggle="toggleExpand"
             @navigate="tryNavigate"
           />
         </ul>
-      </div>
-    </nav>
+      </aside>
+    </transition>
+  </div>
+
+  <aside
+    class="hidden md:flex md:flex-col md:shrink-0 md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:w-64 dark:border-bp-blue-900-light border-bp-yellow-700-light border-r dark:bg-bp-blue-800-light bg-bp-yellow-100-light"
+  >
+    <div class="p-2">
+      <button
+        class="rounded-lg cursor-pointer py-0.5 px-2 hover:dark:bg-bp-blue-700-light hover:bg-bp-yellow-200-light"
+        @click="isOpen = !isOpen"
+      >
+        <Icon :name="isOpen ? 'mdi:backburger' : 'mdi:menu'" size="1.5rem" />
+      </button>
+    </div>
+
+    <div class="grow min-h-0 overflow-y-auto pr-2">
+      <ul class="mt-3 ml-2 space-y-1">
+        <BPSidebarNode
+          v-for="n in nodes"
+          :key="n.id || n.title"
+          :node="n"
+          :open="isOpen"
+          @toggle="toggleExpand"
+          @navigate="tryNavigate"
+        />
+      </ul>
+    </div>
   </aside>
 </template>
 
@@ -38,15 +74,11 @@ import {
 
 const nodes = ref<SidebarLink[]>(rawSidebarLinks);
 const isOpen = ref(true);
+const overlay = ref(false);
 const router = useRouter();
-
-function toggle() {
-  isOpen.value = !isOpen.value;
-}
 
 function toggleExpand(n: SidebarLink) {
   if (!n.isExpandable) return;
-  if (!isOpen.value) isOpen.value = true;
   n.isExpanded = !n.isExpanded;
 }
 
@@ -64,25 +96,17 @@ async function tryNavigate(n: SidebarLink) {
   const s = n.slug || slugify(n.title);
   const sec = n.section;
   await router.push(`/${sec}/${s}`);
+  overlay.value = false;
 }
 </script>
 
 <style scoped>
-.slideList-enter-active,
-.slideList-leave-active {
-  transition:
-    max-height 0.3s ease-in-out,
-    opacity 0.3s ease-in-out;
-  overflow: hidden;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
 }
-.slideList-enter-from,
-.slideList-leave-to {
-  max-height: 0;
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
-}
-.slideList-enter-to,
-.slideList-leave-from {
-  max-height: 1000px;
-  opacity: 1;
 }
 </style>

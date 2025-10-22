@@ -1,7 +1,7 @@
 <template>
   <li>
     <div
-      class="flex justify-between items-center cursor-pointer py-1 pr-4 pl-2 rounded-lg hover:dark:bg-bp-blue-700-light hover:bg-bp-yellow-200-light"
+      class="flex justify-between items-center cursor-pointer py-1 pr-3 pl-3 rounded-lg hover:dark:bg-bp-blue-700-light hover:bg-bp-yellow-200-light"
       @click.stop="
         node.isExpandable ? $emit('toggle', node) : $emit('navigate', node)
       "

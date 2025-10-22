@@ -1,10 +1,12 @@
 <template>
   <div class="bg-backgroundColor text-textColor min-h-screen">
-    <BPHeader />
-    <div class="flex">
-      <BPSideBar />
-      <div class="flex-1 p-4 mt-12">
-        <NuxtPage />
+    <BPHeader class="hidden md:block" />
+    <div class="pt-12 md:pt-16">
+      <div class="flex">
+        <BPSideBar />
+        <main class="flex-1 p-4">
+          <NuxtPage />
+        </main>
       </div>
     </div>
   </div>
