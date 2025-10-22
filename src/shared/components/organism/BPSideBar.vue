@@ -37,19 +37,25 @@
   </div>
 
   <aside
-    class="hidden md:flex md:flex-col md:shrink-0 md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:w-64 dark:border-bp-blue-900-light border-bp-yellow-700-light border-r dark:bg-bp-blue-800-light bg-bp-yellow-100-light"
+    :class="[
+      'hidden md:flex md:flex-col md:sticky md:top-16 md:h-[calc(100vh-4rem)]',
+      'md:shrink-0 border-r dark:border-bp-blue-900-light border-bp-yellow-700-light dark:bg-bp-blue-800-light bg-bp-yellow-100-light',
+      'transition-[width] duration-300 ease-in-out overflow-hidden',
+      isOpen ? 'md:w-64' : 'md:w-16',
+    ]"
+    :aria-expanded="isOpen"
   >
-    <div class="p-2">
+    <div class="w-full">
       <button
-        class="rounded-lg cursor-pointer py-0.5 px-2 hover:dark:bg-bp-blue-700-light hover:bg-bp-yellow-200-light"
+        class="w-full rounded-lg cursor-pointer hover:dark:bg-bp-blue-700-light hover:bg-bp-yellow-200-light my-1"
         @click="isOpen = !isOpen"
       >
         <Icon :name="isOpen ? 'mdi:backburger' : 'mdi:menu'" size="1.5rem" />
       </button>
     </div>
 
-    <div class="grow min-h-0 overflow-y-auto pr-2">
-      <ul class="mt-3 ml-2 space-y-1">
+    <div class="grow min-h-0 overflow-y-auto">
+      <ul class="space-y-1">
         <BPSidebarNode
           v-for="n in nodes"
           :key="n.id || n.title"
