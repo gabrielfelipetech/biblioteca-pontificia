@@ -85,6 +85,9 @@ const router = useRouter();
 
 function toggleExpand(n: SidebarLink) {
   if (!n.isExpandable) return;
+  if (isOpen.value === false) {
+    isOpen.value = true;
+  }
   n.isExpanded = !n.isExpanded;
 }
 
