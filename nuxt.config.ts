@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   app: {
     head: {
+      htmlAttrs: { lang: 'pt-BR' },
       title: 'Biblioteca Pontificia',
       titleTemplate: '%s | Biblioteca Pontificia',
       meta: [
@@ -17,6 +18,8 @@ export default defineNuxtConfig({
           content:
             'Biblioteca Pontifícia. Devocionário, missal, cânticos, documentos papais e muito mais.',
         },
+        { name: 'robots', content: 'index,follow' },
+        { name: 'theme-color', content: '#0b1228' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://bibliotecapontificia.com.br' },
         { property: 'og:title', content: 'Biblioteca Pontificia' },
@@ -28,6 +31,7 @@ export default defineNuxtConfig({
         { property: 'og:image', content: '/og-image.jpg' },
       ],
       link: [
+        { rel: 'canonical', href: 'https://bibliotecapontificia.com.br' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
           rel: 'icon',
@@ -42,21 +46,50 @@ export default defineNuxtConfig({
           href: '/favicon-32x32.png',
         },
         {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '48x48',
+          href: '/favicon-48x48.png',
+        },
+        {
           rel: 'apple-touch-icon',
           sizes: '180x180',
           href: '/apple-touch-icon.png',
         },
         { rel: 'manifest', href: '/site.webmanifest' },
       ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            url: 'https://bibliotecapontificia.com.br',
+            name: 'Biblioteca Pontificia',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target:
+                'https://bibliotecapontificia.com.br/?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Biblioteca Pontificia',
+              logo: 'https://bibliotecapontificia.com.br/android-chrome-512x512.png',
+            },
+          }),
+        },
+      ],
+      __dangerouslyDisableSanitizersByTagID: {},
     },
   },
   nitro: {
     routeRules: {
-      '/texts/**': {
-        headers: {
-          'cache-control':
-            'public, max-age=86400, stale-while-revalidate=86400',
-        },
+      '/': {
+        headers: { 'cache-control': 'public, max-age=0, must-revalidate' },
+      },
+      '/favicon.ico': {
+        headers: { 'cache-control': 'public, max-age=0, must-revalidate' },
       },
     },
   },
@@ -68,7 +101,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    '@nuxtjs/sitemap', // Módulo de sitemap
+    '@nuxtjs/sitemap',
   ],
   hooks: {
     'pages:extend'(pages) {
@@ -82,8 +115,10 @@ export default defineNuxtConfig({
   sitemap: {
     hostname: 'https://bibliotecapontificia.com.br',
     gzip: true,
-    routes: async () => {
-      return ['/sobre', '/contato', '/livros'];
-    },
+    routes: async () => [
+      '/devocionario/via-sacra',
+      '/ritual/batismo',
+      '/ritual/matrimonio',
+    ],
   },
 });
