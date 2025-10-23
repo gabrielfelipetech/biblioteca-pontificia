@@ -10,8 +10,24 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Biblioteca Pontificia',
-    },
-  },
+      titleTemplate: '%s | Biblioteca Pontificia',
+      meta: [
+        { name: 'description', content: 'Biblioteca Pontifícia. Devocionário, missal, cânticos, documentos papais e muito mais.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://bibliotecapontificia.com.br' },
+        { property: 'og:title', content: 'Biblioteca Pontificia' },
+        { property: 'og:description', content: 'Biblioteca Pontifícia. Devocionário, missal, cânticos, documentos papais e muito mais.' },
+        { property: 'og:image', content: '/og-image.jpg' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' }
+      ]
+    }
+  }
   nitro: {
     routeRules: {
       '/texts/**': {

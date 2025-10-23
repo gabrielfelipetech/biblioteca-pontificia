@@ -4,7 +4,6 @@ import BPRenderSectionDual from '@/shared/components/organism/BPRenderSectionDua
 import type { Lang, Section, Block } from '@/shared/types/content';
 import { createError, useAsyncData, useHead, useRoute } from 'nuxt/app';
 import { computed, ref, watch } from 'vue';
-import { usePortableDoc } from '~/shared/composables/usePortableDoc';
 
 const route = useRoute();
 const segments = computed(() => {
@@ -114,7 +113,7 @@ const anyLangs = computed<Lang[]>(() =>
         />
       </article>
 
-      <div v-if="showDual" class="hidden md:grid grid-cols-2 gap-8">
+      <div v-if="showDual" class="hidden md:grid grid-cols-2 gap-4">
         <template v-for="s in doc.content" :key="s.key">
           <BPRenderSectionDual :section="s" l1="la" :l2="alt" />
         </template>

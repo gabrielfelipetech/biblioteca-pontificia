@@ -13,7 +13,7 @@
             <img
               src="../../../assets/images/logo/logoBP.png"
               alt="Biblioteca Pontificia Logo"
-              class="w-full h-full object-cover scale-[1.65]"
+              class="w-full h-full object-cover"
             />
           </div>
           <span class="font-semibold select-none">Biblioteca Pontificia</span>
