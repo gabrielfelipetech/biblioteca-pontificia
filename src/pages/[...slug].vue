@@ -108,7 +108,8 @@ const anyLangs = computed<Lang[]>(() =>
           v-for="s in doc.content"
           :key="s.key"
           :section="s"
-          :lang="showDual ? 'la' : alt || 'pt'"
+          :lang="'la'"
+          :alt="alt"
           fallback="pt"
         />
       </article>
